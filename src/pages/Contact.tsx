@@ -1,18 +1,18 @@
 import TopNavMenu from "../components/navigation/TopNavMenu";
 import TextHighlight from "../components/text/TextHighlight";
 
-const Home = () => {
+const Contact = () => {
 
   return (
-   <main className='home-page'>
+   <main className='contact-page'>
     <TopNavMenu />
     <header>
      <TextHighlight>
-        <h1>Hello, <br/> I'm Janell Rogers</h1>
+        <h1>Contact</h1>
      </TextHighlight>
     </header>
    </main>
   )
 }
 
-export default Home;
+export default Contact;

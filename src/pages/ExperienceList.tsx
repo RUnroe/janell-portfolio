@@ -1,18 +1,18 @@
 import TopNavMenu from "../components/navigation/TopNavMenu";
 import TextHighlight from "../components/text/TextHighlight";
 
-const Home = () => {
+const ExperienceList = () => {
 
   return (
-   <main className='home-page'>
+   <main className='experience-list-page'>
     <TopNavMenu />
     <header>
      <TextHighlight>
-        <h1>Hello, <br/> I'm Janell Rogers</h1>
+        <h1>Experience</h1>
      </TextHighlight>
     </header>
    </main>
   )
 }
 
-export default Home;
+export default ExperienceList;

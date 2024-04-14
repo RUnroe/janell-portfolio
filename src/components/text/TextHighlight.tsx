@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 interface Props {
-  containerClassName?: String,
+  containerClassName?: string,
   children: ReactNode
 }
 

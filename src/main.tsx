@@ -5,11 +5,31 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Home from './pages/Home';
+import ExperienceSingle from './pages/ExperienceSingle';
+import ExperienceList from './pages/ExperienceList';
+import Resume from './pages/Resume';
+import Contact from './pages/Contact';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home/>,
+  },
+  {
+    path: "/experience",
+    element: <ExperienceList/>,
+  },
+  {
+    path: "/experience/:section",
+    element: <ExperienceSingle/>,
+  },
+  {
+    path: "/resume",
+    element: <Resume/>,
+  },
+  {
+    path: "/contact",
+    element: <Contact/>,
   },
 ]);
 
