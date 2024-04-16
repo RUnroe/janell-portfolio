@@ -1,10 +1,10 @@
 
 //Util
-@use './util/colors';
-@use './util/fonts';
+@import './util/colors';
+@import './util/fonts';
 
 //Components
-@use './components/text';
-@use './components/nav';
+@import './components/text';
+@import './components/nav';
 
 //Pages

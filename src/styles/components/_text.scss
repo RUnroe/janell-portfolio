@@ -4,10 +4,12 @@
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Inria Sans", sans-serif;
+  color: $text-color-primary;
 }
 
 button, .btn, a, span, p, input {
   font-family: "Inria Serif", serif;
+  color: $text-color-primary;
 }
 
 
@@ -21,4 +23,18 @@ button, .btn, a, span, p, input {
 
 .text-uppercase {
   text-transform: uppercase;
+}
+
+// **********************
+// General
+// **********************
+
+a, .link {
+  transition: 0.1s ease color;
+
+  &:not(:disabled) {
+    &:hover {
+      color: $primary-color-dark;
+    }
+  }
 }

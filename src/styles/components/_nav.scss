@@ -12,13 +12,22 @@ nav.top-nav {
   }
 
   .dropdown-toggle {
+    position: relative;
+    
     a {
       display: flex;
       gap: 0.5rem;
     }
 
     ul.dropdown-menu {
+      padding: 1rem 1.5rem;
+      background-color: $background-color-secondary;
+      list-style: none;
       position: absolute;
+
+      transform: translate(-50%, 0);
+      left: 50%;
+      width: max-content;
     }
   }
   

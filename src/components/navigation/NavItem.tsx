@@ -26,11 +26,12 @@ const NavItem = ({navChildren = [], url, title}: Props) => {
   
   return ( 
     <motion.div className={`nav-item ${navChildren?.length ? "dropdown-toggle" : ''}`}
-      onMouseEnter={() => setIsOpen(true)}
-      onMouseLeave={() => setIsOpen(false)}
+      // onMouseEnter={() => setIsOpen(true)}
+      // onMouseLeave={() => setIsOpen(false)}
+      onClick={() => setIsOpen(!isOpen)}
       animate={isOpen ? "open" : "closed"}
     >
-      <NavLink to={url}>
+      <NavLink to={url} className="inria-sans-regular">
         {title}
         {navChildren?.length && 
           <motion.div
@@ -73,8 +74,10 @@ const NavItem = ({navChildren = [], url, title}: Props) => {
           style={{ pointerEvents: isOpen ? "auto" : "none" }}
         >
           {navChildren.map(link => (
-            <motion.li className="dropdown-item">
-              <NavLink to={link.url}>{link.title}</NavLink>
+            <motion.li className="dropdown-item" variants={dropdownMenuVariants}>
+              <NavLink to={link.url} className="inria-sans-regular">
+                {link.title}
+              </NavLink>
 
             </motion.li>
           ))}
