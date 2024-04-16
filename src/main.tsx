@@ -4,11 +4,14 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+
 import Home from './pages/Home';
 import ExperienceSingle from './pages/ExperienceSingle';
 import ExperienceList from './pages/ExperienceList';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
+
+import "./styles/app.scss";
 
 const router = createBrowserRouter([
   {

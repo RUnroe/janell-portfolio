@@ -1,0 +1,27 @@
+nav.top-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+
+
+  a {
+    text-transform: uppercase;
+  }
+
+  .dropdown-toggle {
+    a {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    ul.dropdown-menu {
+      position: absolute;
+    }
+  }
+  
+  
+}
+
