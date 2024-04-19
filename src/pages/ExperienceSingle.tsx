@@ -7,14 +7,16 @@ const ExperienceSingle = () => {
   const {section} = useParams();
 
   return (
-   <main className='experience-page'>
-    <TopNavMenu />
-    <header>
-     <TextHighlight>
-        <h1>{toFriendlyName(section || "")}</h1>
-     </TextHighlight>
-    </header>
-   </main>
+    <>
+      <TopNavMenu />
+      <main className='experience-page'>
+        <header>
+          <TextHighlight>
+            <h1>{toFriendlyName(section || "")}</h1>
+          </TextHighlight>
+        </header>
+      </main>
+    </>
   )
 }
 

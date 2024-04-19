@@ -4,14 +4,16 @@ import TextHighlight from "../components/text/TextHighlight";
 const ExperienceList = () => {
 
   return (
-   <main className='experience-list-page'>
+    <>
     <TopNavMenu />
+    <main className='experience-list-page'>
     <header>
      <TextHighlight>
         <h1>Experience</h1>
      </TextHighlight>
     </header>
    </main>
+   </>
   )
 }
 
