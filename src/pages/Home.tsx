@@ -1,5 +1,6 @@
 import TopNavMenu from "../components/navigation/TopNavMenu";
 import TextHighlight from "../components/text/TextHighlight";
+import Container from "../components/layout/Container";
 
 const Home = () => {
 
@@ -7,11 +8,12 @@ const Home = () => {
     <>
       <TopNavMenu />
       <main className='home-page'>
-        <header>
-        <TextHighlight>
-          <h1>Hello, <br/> I'm Janell Rogers</h1>
-        </TextHighlight>
-        </header>
+        <Container>
+          <header>
+            <h1 className="text-uppercase large"><TextHighlight>Hello, </TextHighlight><TextHighlight> I'm Janell Rogers</TextHighlight></h1>
+          
+          </header>
+        </Container>
     </main>
    </>
   )

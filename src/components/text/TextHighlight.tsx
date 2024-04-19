@@ -9,7 +9,7 @@ const TextHighlight = ({containerClassName = '', children} : Props) => {
   return ( 
     <div className={`text-highlight ${containerClassName}`}>
       {children}
-      {/* TODO: Add highlight here */}
+      <div className="hightlight-block"></div>
     </div>
    );
 }
