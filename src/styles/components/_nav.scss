@@ -4,11 +4,16 @@ nav.top-nav {
   gap: 4rem;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 0 1rem;
 
 
   a {
     text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  .nav-item > a {
+    padding: 1rem 0;
   }
 
   .dropdown-toggle {
@@ -17,6 +22,17 @@ nav.top-nav {
     a {
       display: flex;
       gap: 0.5rem;
+      svg {
+        fill:   $text-color-primary;
+        stroke: $text-color-primary;
+        transition: fill 0.1s ease, stroke 0.1s ease;
+      }
+      &:hover {
+        svg {
+          fill:   $primary-color-dark;
+          stroke: $primary-color-dark;
+        }
+      }
     }
 
     ul.dropdown-menu {
@@ -24,10 +40,13 @@ nav.top-nav {
       background-color: $background-color-secondary;
       list-style: none;
       position: absolute;
+      z-index: 10;
+      margin-top:0;
 
       transform: translate(-50%, 0);
       left: 50%;
       width: max-content;
+      
     }
   }
   

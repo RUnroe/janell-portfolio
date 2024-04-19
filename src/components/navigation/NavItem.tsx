@@ -21,14 +21,16 @@ interface Props {
 }
 
 const NavItem = ({navChildren = [], url, title}: Props) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMouseOverLink, setIsMouseOverLink] = useState(false);
+  const [isMouseOverMenu, setIsMouseOverMenu] = useState(false);
+  const isOpen = isMouseOverLink || isMouseOverMenu;
 
   
   return ( 
     <motion.div className={`nav-item ${navChildren?.length ? "dropdown-toggle" : ''}`}
-      // onMouseEnter={() => setIsOpen(true)}
-      // onMouseLeave={() => setIsOpen(false)}
-      onClick={() => setIsOpen(!isOpen)}
+      onMouseEnter={() => setIsMouseOverLink(true)}
+      onMouseLeave={() => setTimeout(() => setIsMouseOverLink(false), 100)}
+      // onClick={() => setIsOpen(!isOpen)}
       animate={isOpen ? "open" : "closed"}
     >
       <NavLink to={url} className="inria-sans-regular">
@@ -40,7 +42,7 @@ const NavItem = ({navChildren = [], url, title}: Props) => {
               closed: { rotate: 0 }
             }}
             transition={{ duration: 0.2 }}
-            style={{ originY: 0.55 }}
+            style={{ originY: 0.5 }}
           >
             <svg width="15" height="15" viewBox="0 0 20 20">
               <path d="M0 7 L 20 7 L 10 16" />
@@ -51,6 +53,8 @@ const NavItem = ({navChildren = [], url, title}: Props) => {
       
       {navChildren?.length ? 
         <motion.ul className="dropdown-menu"
+        onMouseEnter={() => setIsMouseOverMenu(true)}
+        onMouseLeave={() => setTimeout(() => setIsMouseOverMenu(false), 100)}
           variants={{
             open: {
               clipPath: "inset(0% 0% 0% 0% round 10px)",
