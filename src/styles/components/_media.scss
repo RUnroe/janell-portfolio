@@ -60,3 +60,17 @@
 
 
 
+.wave-bg-icon {
+  stroke: $primary-color-light;
+  opacity: .4;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  min-width: 800px;
+  max-width: 1400px;
+  height: auto;
+  max-height: 55%;
+}
+

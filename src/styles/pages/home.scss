@@ -1,5 +1,6 @@
 
 .home-page {
+
   &.grid-layout {
     .header {
       grid-column: 1 / 6;
@@ -43,6 +44,10 @@
 
 @media all and (max-width: $layout-breakpoint-tablet) {
   .home-page {
+    .header h1 {
+      margin-top: 0;
+    }
+    
     &.grid-layout {
       .header {
         grid-column: 1 / 7;
@@ -64,6 +69,7 @@
 
 @media all and (max-width: $layout-breakpoint-mobile) {
   .home-page {
+    
     &.grid-layout {
       .header {
         grid-column: 1 / 5;
