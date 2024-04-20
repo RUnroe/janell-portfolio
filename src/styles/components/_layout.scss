@@ -1,0 +1,30 @@
+
+
+.grid-layout {
+  > .content {
+    display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  }
+  
+}
+
+@media all and (max-width: $layout-breakpoint-tablet) {
+  .grid-layout {
+    > .content {
+      display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    }
+    
+  }
+}
+
+
+@media all and (max-width: $layout-breakpoint-mobile) {
+  .grid-layout {
+    > .content {
+      display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    }
+    
+  }
+}

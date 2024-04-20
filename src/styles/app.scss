@@ -1,5 +1,5 @@
 //Util
-@import './util/colors';
+@import './util/variables';
 @import './util/general';
 @import './util/fonts';
 
@@ -8,5 +8,8 @@
 @import './components/common';
 @import './components/nav';
 @import './components/container';
+@import './components/layout';
 
 //Pages
+
+@import './pages/home';

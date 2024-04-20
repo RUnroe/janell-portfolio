@@ -1,5 +1,14 @@
 .content {
   max-width: 1200px;
   margin: 0 auto;
-  padding:1rem;
+  padding: 2rem;
+}
+
+
+
+
+@media all and (max-width: $layout-breakpoint-mobile) {
+  .content {
+    padding: 1rem;
+  }
 }

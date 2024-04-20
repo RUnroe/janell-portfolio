@@ -11,7 +11,7 @@ const PageLayout = ({children, pageName}: Props) => {
   return (  
     <>
       <TopNavMenu />
-      <main className={pageName}>
+      <main className={`${pageName} grid-layout`}>
         <Container>
           {children}
         </Container>

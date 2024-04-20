@@ -12,11 +12,15 @@ const Home = () => {
         <header className="header">
           <h1 className="text-uppercase large"><TextHighlight>Hello, </TextHighlight><TextHighlight> I'm Janell Rogers</TextHighlight></h1>
         </header>
-        <img className="dropshadow border-radius" src={headshot} />
+        
+        <aside className="headshot">
+          <img className="dropshadow border-radius" src={headshot} />
+        </aside>
+        
         <section className="about-content">
-          <p className="headline">{pageData.home.headline}</p>
+          <p className="headline sub-header">{pageData.home.headline}</p>
 
-          <p className="bio">
+          <p className="bio text-justify">
             {pageData.home.bio}
           </p>
         </section>
