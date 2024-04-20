@@ -1,19 +1,16 @@
-import TopNavMenu from "../components/navigation/TopNavMenu";
+import PageLayout from "../components/layout/PageLayout";
 import TextHighlight from "../components/text/TextHighlight";
 
 const Resume = () => {
 
   return (
-    <>
-      <TopNavMenu />
-      <main className='resume-page'>
-        <header>
+    <PageLayout pageName="resume-page">
+      <header>
         <TextHighlight>
             <h1>Resume</h1>
         </TextHighlight>
-        </header>
-      </main>
-   </>
+      </header>
+    </PageLayout>
   )
 }
 

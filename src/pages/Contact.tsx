@@ -1,19 +1,16 @@
-import TopNavMenu from "../components/navigation/TopNavMenu";
+import PageLayout from "../components/layout/PageLayout";
 import TextHighlight from "../components/text/TextHighlight";
 
 const Contact = () => {
 
   return (
-    <>
-    <TopNavMenu />
-      <main className='contact-page'>
-        <header>
+    <PageLayout pageName="contact-page">
+      <header>
         <TextHighlight>
             <h1>Contact</h1>
         </TextHighlight>
-        </header>
-      </main>
-   </>
+      </header>
+    </PageLayout>
   )
 }
 

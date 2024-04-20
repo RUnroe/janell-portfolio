@@ -1,19 +1,16 @@
-import TopNavMenu from "../components/navigation/TopNavMenu";
+import PageLayout from "../components/layout/PageLayout";
 import TextHighlight from "../components/text/TextHighlight";
 
 const ExperienceList = () => {
 
   return (
-    <>
-    <TopNavMenu />
-    <main className='experience-list-page'>
+    <PageLayout pageName="experience-list-page">
     <header>
      <TextHighlight>
         <h1>Experience</h1>
      </TextHighlight>
     </header>
-   </main>
-   </>
+   </PageLayout>
   )
 }
 
