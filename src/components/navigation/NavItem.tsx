@@ -79,7 +79,7 @@ const NavItem = ({navChildren = [], url, title}: Props) => {
           style={{ pointerEvents: isOpen ? "auto" : "none" }}
         >
           {navChildren.map(link => (
-            <motion.li className="dropdown-item" variants={dropdownMenuVariants}>
+            <motion.li className="dropdown-item" variants={dropdownMenuVariants} key={`nav-link-${link.title}-${link.url}`}>
               <NavLink to={link.url} className="inria-sans-regular">
                 {link.title}
               </NavLink>

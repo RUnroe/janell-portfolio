@@ -1,3 +1,4 @@
+import React from "react";
 import LinkStructure from "../../types/LinkStructure";
 import NavItem from "./NavItem";
 
@@ -47,7 +48,10 @@ const TopNavMenu = () => {
     <nav className="top-nav">
       {
         navigationStructure.map((link:LinkStructure) => (
-          <NavItem title={link.title} url={link.url} navChildren={link.children}/>
+          <React.Fragment key={`top-nav-item-${link.title}-${link.url}`}>
+            <NavItem title={link.title} url={link.url} navChildren={link.children}/>
+          </React.Fragment>
+          
         ))
       }
     </nav>
