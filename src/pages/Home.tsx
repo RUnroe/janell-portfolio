@@ -19,7 +19,7 @@ const Home = () => {
         </aside>
         
         <section className="about-content">
-          <p className="headline sub-header">{pageData.home.headline}</p>
+          <p className="headline sub-header text-center">{pageData.home.headline}</p>
 
           <SocialRow />
 

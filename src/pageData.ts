@@ -1,3 +1,5 @@
+import { FacebookIcon, InstagramIcon, MailIcon } from "./assets/icons/icons";
+
 export default {
   home: {
     imageSrc: "",
@@ -51,22 +53,22 @@ export default {
     email: "kjre00@gmail.com",
     socials: [
       {
-        title: "Facebook",
-        username: "", //Use this with title to make image alt e.g. (Facebook - @JRogers)
-        iconSrc: "",
-        url: "",
+        title: "Instagram", //Use this with title to make image alt e.g. (Instagram - janell.ro.1)
+        username: "janell.ro.1",
+        iconComponent: InstagramIcon,
+        url: "https://www.instagram.com/janell.ro.1",
       },
       {
-        title: "Instagram",
-        username: "",
-        iconSrc: "",
-        url: "",
+        title: "Facebook",
+        username: "janelle.rogers.731", 
+        iconComponent: FacebookIcon,
+        url: "https://www.facebook.com/janelle.rogers.731",
       },
       {
         title: "Email",
-        username: "",
-        iconSrc: "",
-        url: "",
+        username: "kjre00@gmail.com",
+        iconComponent: MailIcon,
+        url: "mailto:kjre00@gmail.com?subject=Oh%20hi!",
       },
     ]
   }

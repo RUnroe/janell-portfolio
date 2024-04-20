@@ -1,0 +1,62 @@
+// **********************
+// Icons
+// **********************
+.icon {
+  width: 1.6rem;
+  height: 1.6rem;
+  
+  fill: $text-color-primary;
+}
+
+
+.social-row {
+  padding: 0.5rem 0;
+  position: relative;
+  z-index: 5;
+  
+  .center-bg-bar {
+    position: absolute;
+    z-index: -1;
+    top: calc(50% - 1px);
+    margin: 0;
+    height: 2px;
+    width: 100%;
+    background-color: $primary-color-light;
+    border: none;
+  }
+
+  .socials-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  
+  
+    .social-link {
+      background-color: $primary-color-light;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 100vh;
+  
+      border: 0.5rem solid $background-color-primary;
+
+      transition: transform 0.1s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    
+    
+      .social-icon {
+        fill: $primary-color-dark;
+      }
+    }
+    
+  }
+  
+}
+
+
+

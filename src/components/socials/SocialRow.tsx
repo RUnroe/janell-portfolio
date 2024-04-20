@@ -1,6 +1,7 @@
 import React from "react";
 import pageData from "../../pageData";
 import SocialIcon from "./SocialIcon";
+import { IconComponentType } from "../../assets/icons/icons";
 
 const SocialRow = () => {
   return ( 
@@ -13,7 +14,7 @@ const SocialRow = () => {
             <SocialIcon 
               title={`${socialInfo.title} - ${socialInfo.username}`}
               url={socialInfo.url}
-              iconSrc={socialInfo.iconSrc}
+              IconComponent={(socialInfo.iconComponent as unknown) as IconComponentType}
             />
           </React.Fragment>
         ))}
