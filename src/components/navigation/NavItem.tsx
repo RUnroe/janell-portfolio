@@ -32,6 +32,7 @@ const NavItem = ({navChildren = [], url, title}: Props) => {
       onMouseLeave={() => setTimeout(() => setIsMouseOverLink(false), 100)}
       // onClick={() => setIsOpen(!isOpen)}
       animate={isOpen ? "open" : "closed"}
+      initial={false}
     >
       <NavLink to={url} className="inria-sans-regular">
         {title}

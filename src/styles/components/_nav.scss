@@ -11,6 +11,10 @@ nav.top-nav {
     text-transform: uppercase;
     text-decoration: none;
     font-size: 1.1rem;
+    border-bottom: 2px solid transparent;
+    &.active {
+      border-color: $primary-color-light;
+    }
   }
 
   .nav-item > a {
