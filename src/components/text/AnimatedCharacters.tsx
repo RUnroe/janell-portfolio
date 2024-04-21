@@ -65,7 +65,7 @@ const AnimatedCharacters = (props: Props) => {
         return (
           // Wrap each word in the Wrapper component
           <Wrapper key={index}>
-            {words[index].flat().map((element: string, index: number) => {
+            {word.flat().map((element: string, index: number) => {
               return (
                 <span
                   style={{
