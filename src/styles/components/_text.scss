@@ -62,6 +62,12 @@ button, .btn, a, span, p, input {
     height: 55%;
     background-color: $primary-color-light;
   }
+
+  &.animated {
+    .hightlight-block {
+      top: 40%;
+    }
+  }
 }
 
 // **********************
