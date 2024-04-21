@@ -1,10 +1,11 @@
-import TextHighlight from "../components/text/TextHighlight";
 import PageLayout from "../components/layout/PageLayout";
 import pageData from "../pageData";
 
 import headshot from "../assets/images/headshot.jpg";
 import SocialRow from "../components/socials/SocialRow";
 import AnimatedHeader from "../components/text/AnimatedHeader";
+import { motion } from "framer-motion";
+import FadeUpSection from "../components/layout/animation/FadeUpSection";
 
 const Home = () => {
 
@@ -20,7 +21,7 @@ const Home = () => {
           <img className="dropshadow border-radius" src={headshot} />
         </aside>
         
-        <section className="about-content">
+        <FadeUpSection sectionClassName="about-content">
           <p className="headline sub-header text-center">{pageData.home.headline}</p>
 
           <SocialRow />
@@ -28,7 +29,9 @@ const Home = () => {
           <p className="bio text-justify">
             {pageData.home.bio}
           </p>
-        </section>
+        </FadeUpSection>
+
+        
 
     </PageLayout>
   )

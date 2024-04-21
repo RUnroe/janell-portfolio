@@ -11,11 +11,13 @@ const AnimatedTextHighlight = ({containerClassName = '', children, delayOffset =
   const variants = {
     hidden: {
       width: 0,
-      transition: { delay: 0, ease: [0.455, 0.03, 0.515, 0.955], duration: 0.85 }
+      transition: { delay: 0, ease: [0.1, 0.03, 0.515, 0.955], duration: 0.75 }
+      // transition: { type: "spring", delay: 1, ease: "linear", duration: 0.5 }
     },
     visible: {
       width: "100%",
-      transition: { delay: (0.6 + delayOffset), ease: [0.455, 0.03, 0.515, 0.955], duration: 0.75 }
+      transition: { delay: (0.6 + delayOffset), ease: [0.1, 0.03, 0.515, 0.955], duration: 0.75 }
+      // transition: { type: "spring", delay: 1, ease: "linear", duration: 0.5 }
     }
   };
 

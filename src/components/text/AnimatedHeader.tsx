@@ -28,7 +28,7 @@ const AnimatedHeader = ({textList, hasHighlight = true, headerClassName, contain
       <h1 className={headerClassName}>
         {textList.map((text, index) => (
           hasHighlight ? 
-          <AnimatedTextHighlight delayOffset={0.2 * index}>
+          <AnimatedTextHighlight delayOffset={0.2 * index} key={`animated-header-${text}-${index}`}>
             <AnimatedCharacters type="span" text={text} key={`animated-header-${text}-${index}`} textStyle={"inria-sans-bold"}/>
           </AnimatedTextHighlight>
           : <AnimatedCharacters type="span" text={text} key={`animated-header-${text}-${index}`} textStyle={"inria-sans-bold"}/>
