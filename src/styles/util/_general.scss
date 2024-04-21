@@ -19,3 +19,7 @@ body {
   background-color: $background-color-primary;
   position: relative;
 }
+
+.test-border {
+  border: 2px dotted blue;
+}
