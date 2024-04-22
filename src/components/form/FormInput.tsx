@@ -11,7 +11,15 @@ interface Props {
 const FormInput = ({field, value, type, updateFormData, required = false}: Props) => {
   return ( 
     <div className="form-group">
-       <label htmlFor={field}>{camelCaseToWords(field)}</label>
+      <label htmlFor={field} className="inria-sans-bold">{camelCaseToWords(field)}</label>
+      {type === "textarea" ? 
+        <textarea
+          id={field}
+          value={value}
+          onChange={(e) => updateFormData(field, e.target.value)}
+          required={required}
+        />
+        :
         <input
           id={field}
           type={type}
@@ -19,6 +27,7 @@ const FormInput = ({field, value, type, updateFormData, required = false}: Props
           onChange={(e) => updateFormData(field, e.target.value)}
           required={required}
         />
+      }
     </div>
    );
 }

@@ -3,7 +3,16 @@
   z-index: 2;
 }
 
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
 .grid-layout {
+  img {width: 100%;}
   > .content {
     display: grid;
   grid-template-columns: repeat(10, 1fr);

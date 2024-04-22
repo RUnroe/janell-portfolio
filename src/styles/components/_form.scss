@@ -1,0 +1,26 @@
+
+.form {
+  button {
+    margin: 0.5rem auto;
+    display: block;
+  }
+  
+  .form-group {
+    margin: 0.5rem 0;
+  
+    label {
+      display: block;
+      
+    }
+    input, textarea {
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+      max-height: 80vh;
+    }
+  }
+}

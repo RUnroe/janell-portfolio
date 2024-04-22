@@ -54,24 +54,22 @@ const ContactForm = () => {
   }
 
   return (
-    <form onSubmit={submitForm}>
+    <form onSubmit={submitForm} className="contact-form form dropshadow">
       <div className="flex">
-        <div className="form-group">
-          <FormInput 
-            field={"firstName"}
-            value={formData.firstName}
-            type={"text"}
-            updateFormData={updateFormData}
-            required={true}
-          />
-          <FormInput 
-            field={"lastName"}
-            value={formData.lastName}
-            type={"text"}
-            updateFormData={updateFormData}
-            required={true}
-          />
-        </div>
+        <FormInput 
+          field={"firstName"}
+          value={formData.firstName}
+          type={"text"}
+          updateFormData={updateFormData}
+          required={true}
+        />
+        <FormInput 
+          field={"lastName"}
+          value={formData.lastName}
+          type={"text"}
+          updateFormData={updateFormData}
+          required={true}
+        />
       </div>
       <FormInput 
         field={"email"}
@@ -84,7 +82,7 @@ const ContactForm = () => {
       <FormInput 
         field={"message"}
         value={formData.message}
-        type={"text"}
+        type={"textarea"}
         updateFormData={updateFormData}
         required={true}
       />
