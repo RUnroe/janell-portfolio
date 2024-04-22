@@ -23,7 +23,7 @@ const Home = () => {
         </aside>
         
         
-        <FadeUpSection sectionClassName="about-content" delay={1}>
+        <FadeUpSection sectionClassName="about-content" delay={0.5}>
           <p className="headline sub-header text-center">{pageData.home.headline}</p>
 
           <SocialRow />

@@ -2,7 +2,7 @@
 // Default fonts
 // **********************
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, label {
   font-family: "Inria Sans", sans-serif;
   color: $text-color-primary;
 }
@@ -76,6 +76,12 @@ button, .btn, a, span, p, input {
     }
   }
 }
+
+// **********************
+// Standardize
+// **********************
+  h1 {margin: 0}
+
 
 // **********************
 // General

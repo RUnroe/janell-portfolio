@@ -74,3 +74,20 @@
   max-height: 55%;
 }
 
+
+
+.icon-text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  .icon {
+    width: 1.35rem;
+    fill: $primary-color-dark;
+  }
+
+  p {
+    color: $primary-color-dark;
+    margin: 0.35rem;
+  }
+}

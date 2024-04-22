@@ -15,9 +15,9 @@ const SocialRow = () => {
         opacity: {
           delay: 1,
         },
-        delay: 2.5,
+        delay: 0.5,
         duration: 0.3,
-        delayChildren: 1.65,
+        delayChildren: 1.1,
         staggerChildren: 0.2,
       }
     },

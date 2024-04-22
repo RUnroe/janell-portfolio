@@ -10,7 +10,7 @@ interface Props {
 const AnimatedTextHighlight = ({containerClassName = '', children, delayOffset = 0} : Props) => {
   //Delay added this way to try to accomodate for title text width calculation time. 
   //The title text width starts larger than it needs to be. It gets adjusted, but this highlight-block takes the first value, so it extends too far
-  const highlightDelay = 200; //ms
+  const highlightDelay = 100; //ms
   const [showHighlight, setShowHighlight] = useState(false);
 
   useEffect(() => {
