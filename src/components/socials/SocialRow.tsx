@@ -13,9 +13,12 @@ const SocialRow = () => {
     animate: {
       opacity: 1,
       transition: {
-        delay: 0.75,
+        opacity: {
+          delay: 1,
+        },
+        delay: 2.5,
         duration: 0.3,
-        delayChildren: 0.5,
+        delayChildren: 1.65,
         staggerChildren: 0.2,
       }
     },

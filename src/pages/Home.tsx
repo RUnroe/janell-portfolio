@@ -17,10 +17,13 @@ const Home = () => {
         <AnimatedHeader textList={["Hello,", "I'm Janell Rogers"]} containerClassName="header" headerClassName={"text-uppercase text-large"}/>
 
         <aside className="headshot">
-          <img className="dropshadow border-radius" src={headshot} />
+          <FadeUpSection delay={0.25}>
+            <img className="dropshadow border-radius" src={headshot} />
+          </FadeUpSection>
         </aside>
         
-        <FadeUpSection sectionClassName="about-content">
+        
+        <FadeUpSection sectionClassName="about-content" delay={1}>
           <p className="headline sub-header text-center">{pageData.home.headline}</p>
 
           <SocialRow />

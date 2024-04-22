@@ -17,6 +17,7 @@ const SocialIcon = ({title, url, IconComponent}: Props) => {
     animate: {
       scale: 1,
       opacity: 1,
+      
     },
     
   }

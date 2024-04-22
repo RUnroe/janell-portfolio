@@ -4,11 +4,12 @@ import { ReactNode } from "react";
 
 interface Props {
   sectionClassName?: string,
+  delay?: number,
   children: ReactNode,
 }
 
 
-const FadeUpSection = ({sectionClassName = "", children}: Props) => {
+const FadeUpSection = ({sectionClassName = "", delay = 0, children}: Props) => {
   const initial = {
     y: "50%",
     opacity: 0,
@@ -21,8 +22,9 @@ const FadeUpSection = ({sectionClassName = "", children}: Props) => {
 
   const transition = {
     duration: 0.75,
+    delay: delay,
     opacity: {
-      delay: 0.35,
+      delay: (delay + 0.35),
       duration: 0.7
     }
   }
