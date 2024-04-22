@@ -1,4 +1,3 @@
-import React from "react";
 import pageData from "../../pageData";
 import SocialIcon from "./SocialIcon";
 import { IconComponentType } from "../../assets/icons/icons";
