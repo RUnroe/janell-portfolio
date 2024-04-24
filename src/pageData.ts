@@ -43,7 +43,7 @@ export default {
   },
   resume: {
     pdf: {
-      src: "https://drive.google.com/file/d/1XiFYET8EDzwP4pwZgII_kXS4MLzlXq2W/preview", //Add to G Drive, 3 dots => embed item... => copy link to here
+      src: "https://drive.google.com/file/d/1Cl2PiKxf9up3jtT6I0uVuj_FMmteTm5-/preview", //Add to G Drive, 3 dots => embed item... => copy link to here
     }
   },
   contact: {

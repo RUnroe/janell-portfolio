@@ -13,12 +13,14 @@ const Resume = () => {
       </header>
 
       <section className="resume-pdf">
-        <iframe 
-          className={"pdf"} 
-          src={pageData.resume.pdf.src}
-          width="100%" height="100%" 
-          allow="autoplay">
-        </iframe>
+        <div className="pdf-container">
+          <iframe 
+            className={"pdf"} 
+            src={pageData.resume.pdf.src}
+            width="100%" height="100%" 
+            allow="autoplay">
+          </iframe>
+        </div>
       </section>
       
     </PageLayout>

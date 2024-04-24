@@ -1,18 +1,20 @@
 //Util
 @import './util/variables';
-@import './util/general';
 @import './util/fonts';
+@import './util/general';
+
 
 //Components
-@import './components/text';
 @import './components/common';
+@import './components/container';
+@import './components/form';
+@import './components/layout';
 @import './components/media';
 @import './components/nav';
-@import './components/container';
-@import './components/layout';
-@import './components/form';
+@import './components/text';
+
 
 //Pages
-
 @import './pages/home';
 @import './pages/contact';
+@import './pages/resume';
