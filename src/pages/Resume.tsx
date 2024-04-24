@@ -1,14 +1,12 @@
 import PageLayout from "../components/layout/PageLayout";
-import TextHighlight from "../components/text/TextHighlight";
+import AnimatedHeader from "../components/text/AnimatedHeader";
 
 const Resume = () => {
 
   return (
-    <PageLayout pageName="resume-page">
-      <header>
-        <TextHighlight>
-            <h1>Resume</h1>
-        </TextHighlight>
+    <PageLayout pageName="resume-page grid-layout">
+      <header className="header-title">
+        <AnimatedHeader textList={["Resume"]} />
       </header>
     </PageLayout>
   )

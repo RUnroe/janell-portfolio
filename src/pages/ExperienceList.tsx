@@ -1,15 +1,15 @@
 import PageLayout from "../components/layout/PageLayout";
-import TextHighlight from "../components/text/TextHighlight";
+import AnimatedHeader from "../components/text/AnimatedHeader";
+
 
 const ExperienceList = () => {
 
   return (
-    <PageLayout pageName="experience-list-page">
-    <header>
-     <TextHighlight>
-        <h1>Experience</h1>
-     </TextHighlight>
-    </header>
+    <PageLayout pageName="experience-list-page grid-layout">
+      <header className="header-title">
+        <AnimatedHeader textList={["Experience"]} />
+      </header>
+     
    </PageLayout>
   )
 }
