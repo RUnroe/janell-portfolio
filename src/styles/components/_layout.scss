@@ -26,6 +26,9 @@
 }
 
 @media all and (max-width: $layout-breakpoint-tablet) {
+  main {
+    padding-top: 3rem;
+  }
   .grid-layout {
     > .content {
       display: grid;

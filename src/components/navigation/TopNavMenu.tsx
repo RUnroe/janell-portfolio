@@ -1,8 +1,9 @@
 import React from "react";
 import LinkStructure from "../../types/LinkStructure";
 import NavItem from "./NavItem";
+import MobileTopNavMenu from "./MobileTopNavMenu";
 
-const navigationStructure: LinkStructure[] = [
+export const navigationStructure: LinkStructure[] = [
   {
     title: "Home",
     url: "/",
@@ -45,6 +46,7 @@ const navigationStructure: LinkStructure[] = [
 
 const TopNavMenu = () => {
   return ( 
+    <>
     <nav className="top-nav">
       {
         navigationStructure.map((link:LinkStructure) => (
@@ -55,6 +57,8 @@ const TopNavMenu = () => {
         ))
       }
     </nav>
+    <MobileTopNavMenu />
+    </>
    );
 }
  
