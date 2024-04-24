@@ -20,8 +20,8 @@ const Contact = () => {
       </FadeUpSection>
       <FadeUpSection delay={0.3}>
         <h2 className="mb-0 text-uppercase">Janell Rogers</h2>
-        {/* <IconText IconComponent={(PhoneIcon as unknown) as IconComponentType} text={pageData.contact.phoneNumber}/> */}
-        <IconText IconComponent={(MailIcon as unknown) as IconComponentType} text={pageData.contact.email}/>
+        {pageData.contact.phoneNumber ? <IconText IconComponent={(PhoneIcon as unknown) as IconComponentType} text={pageData.contact.phoneNumber}/> : null}
+        {pageData.contact.email ? <IconText IconComponent={(MailIcon as unknown) as IconComponentType} text={pageData.contact.email}/>: null}
       </FadeUpSection>
      </section>
       
