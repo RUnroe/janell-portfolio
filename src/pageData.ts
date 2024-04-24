@@ -48,7 +48,7 @@ export default {
   },
   contact: {
     imageSrc: "",
-    phoneNumber: "+1 (808) 783-8941",
+    phoneNumber: "",
     email: "kjre00@gmail.com",
     socials: [
       {
