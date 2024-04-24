@@ -2,12 +2,12 @@
 // Default fonts
 // **********************
 
-h1, h2, h3, h4, h5, h6, label {
+h1, h2, h3, h4, h5, h6, label, button, .button {
   font-family: "Inria Sans", sans-serif;
   color: $text-color-primary;
 }
 
-button, .btn, a, span, p, input {
+a, span, p, input {
   font-family: "Inria Serif", serif;
   color: $text-color-primary;
 }

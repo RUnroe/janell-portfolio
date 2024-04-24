@@ -1,7 +1,8 @@
 
 .form {
+  border-radius: $border-radius;
   button {
-    margin: 0.5rem auto;
+    margin: 1.5rem auto 0;
     display: block;
   }
   
@@ -11,17 +12,52 @@
   
     label {
       display: block;
-      
+      .asterisk {
+        padding-left: 0.2rem;
+        color: $primary-color-dark;
+        font-weight: 700;
+        font-family: "Inria Sans", sans-serif;
+        font-size: 1.1rem;
+        line-height: 1;
+      }
     }
     input, textarea {
       box-sizing: border-box;
       display: block;
       width: 100%;
+      background-color: $background-color-primary;
+      border: 0px solid $primary-color-light;
+      border-bottom-width: 3px;
+      padding: 0.5rem 0.75rem;
+      border-radius: $border-radius;
+
     }
     textarea {
       resize: vertical;
       min-height: 200px;
       max-height: 80vh;
     }
+  }
+}
+
+
+button, .button {
+  display: block;
+  padding: 0.5rem 1.5rem;
+  border-radius: $border-radius;
+  width: fit-content;
+  border: none;
+  color: $primary-color-dark;
+  background-color: $primary-color-light;
+  
+  font-weight: bold;
+  transition: 0.1s ease color, 0.1s ease background-color;
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+  &:hover {
+    color: $background-color-secondary;
+    background-color: $primary-color-dark;
   }
 }

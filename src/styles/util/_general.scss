@@ -23,3 +23,10 @@ body {
 .test-border {
   border: 2px dotted blue;
 }
+
+:focus {
+  outline-color: $primary-color-dark;
+}
+::selection {
+  background-color: $primary-color-light;
+}

@@ -11,7 +11,7 @@ interface Props {
 const FormInput = ({field, value, type, updateFormData, required = false}: Props) => {
   return ( 
     <div className="form-group">
-      <label htmlFor={field} className="inria-sans-bold">{camelCaseToWords(field)}</label>
+      <label htmlFor={field} className="inria-sans-bold">{camelCaseToWords(field)} {required ? <span className="asterisk">*</span> : ""}</label>
       {type === "textarea" ? 
         <textarea
           id={field}
