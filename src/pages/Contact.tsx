@@ -10,7 +10,7 @@ import { IconComponentType, MailIcon, PhoneIcon } from "../assets/icons/icons";
 const Contact = () => {
 
   return (
-    <PageLayout pageName="contact-page grid-layout">
+    <PageLayout pageName="contact-page">
       <header className="header-title">
         <AnimatedHeader textList={["Contact Me"]} />
       </header>

@@ -43,8 +43,7 @@ export default {
   },
   resume: {
     pdf: {
-      src: "",
-      name: "janell-rogers-resume.pdf",
+      src: "https://drive.google.com/file/d/1XiFYET8EDzwP4pwZgII_kXS4MLzlXq2W/preview", //Add to G Drive, 3 dots => embed item... => copy link to here
     }
   },
   contact: {
