@@ -23,9 +23,10 @@ const variants = {
 interface Props {
   navItem: LinkStructure,
   nested?: boolean,
+  closeMenu: () => void,
 }
 
-export const MenuItem = ({navItem, nested=false}: Props) => {
+export const MenuItem = ({navItem, nested=false, closeMenu}: Props) => {
   return (
     <motion.li
       variants={variants}
@@ -33,7 +34,7 @@ export const MenuItem = ({navItem, nested=false}: Props) => {
       whileTap={{ scale: 0.95 }}
       className={nested ? "nested" : ""}
     >
-      <NavLink to={navItem.url} className="inria-sans-regular">
+      <NavLink to={navItem.url} className="inria-sans-regular" onClick={() => closeMenu()}>
         {navItem.title}
       </NavLink>
     </motion.li>

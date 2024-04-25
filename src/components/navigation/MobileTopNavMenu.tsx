@@ -1,5 +1,5 @@
-import { motion, useCycle } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
+import { useRef, useState } from "react";
 import useDimensions from "../../hooks/useDimensions";
 import { MenuToggle } from "./MenuToggle";
 import { MenuItem } from "./MobileMenuItem";
@@ -7,11 +7,13 @@ import { navigationStructure } from "./TopNavMenu";
 import React from "react";
 
 const MobileTopNavMenu = () => {
-  const [isOpen, toggleOpen] = useCycle(false, true);
+  const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
 
-
+  const toggleOpen = () => {
+    setIsOpen(!isOpen);
+  }
 
   const sidebar = {
     open: (height = 1000) => ({
@@ -45,7 +47,7 @@ const MobileTopNavMenu = () => {
   return (  
     <motion.nav 
     initial={false}
-    animate={isOpen ? "open" : "closed"} //TODO: close when navigating to new page
+    animate={isOpen ? "open" : "closed"}
     custom={height}
     ref={containerRef}
     className="mobile"
@@ -56,15 +58,15 @@ const MobileTopNavMenu = () => {
           if(navItem.children && navItem.children.length) {
             return (
               <React.Fragment key={navItem.url}>
-                <MenuItem navItem={navItem} key={navItem.url} />
+                <MenuItem navItem={navItem} key={navItem.url} closeMenu={() => setIsOpen(false)} />
                 {navItem.children.map(nestedItem => (
-                  <MenuItem navItem={nestedItem} key={`nested-${nestedItem.url}`} nested={true}/>
+                  <MenuItem navItem={nestedItem} key={`nested-${nestedItem.url}`} nested={true} closeMenu={() => setIsOpen(false)}/>
                 ))}
               </React.Fragment>
             )
           }
           else return (
-            <MenuItem navItem={navItem} key={navItem.url} />
+            <MenuItem navItem={navItem} key={navItem.url} closeMenu={() => setIsOpen(false)} />
           )
         })}
       </motion.ul>
