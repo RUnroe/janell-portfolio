@@ -87,11 +87,11 @@ a, span, p, input {
 // General
 // **********************
 
-a, .link {
+a, .link, a span, .link span {
   transition: 0.1s ease color;
 
   &:not(:disabled) {
-    &:hover {
+    &:hover, &:hover span {
       color: $primary-color-dark;
     }
   }

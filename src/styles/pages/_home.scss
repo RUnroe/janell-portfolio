@@ -1,9 +1,14 @@
 
 .home-page {
-
+  .header {
+    margin: 2rem 0;
+  }
   &.grid-layout {
-    .header {
+    .header, .detector {
       grid-column: 1 / 6;
+    }
+    .detector { 
+      height: 0;
     }
     .headshot {
       grid-column: 8 / 11;
@@ -22,7 +27,7 @@
 @media all and (max-width: $layout-breakpoint-laptop) {
   .home-page {
     &.grid-layout {
-      .header {
+      .header, .detector {
         grid-column: 1 / 6;
       }
       .headshot {
@@ -44,13 +49,13 @@
 
 @media all and (max-width: $layout-breakpoint-tablet) {
   .home-page {
-    .header h1 {
+    .header {
       margin-top: 0;
       margin-bottom: 2rem;
     }
     
     &.grid-layout {
-      .header {
+      .header, .detector {
         grid-column: 1 / 7;
       }
       .headshot {
@@ -72,7 +77,7 @@
   .home-page {
     
     &.grid-layout {
-      .header {
+      .header, .detector {
         grid-column: 1 / 5;
       }
       .headshot {

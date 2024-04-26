@@ -30,12 +30,10 @@ export const MenuItem = ({navItem, nested=false, closeMenu}: Props) => {
   return (
     <motion.li
       variants={variants}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
       className={nested ? "nested" : ""}
     >
-      <NavLink to={navItem.url} className="inria-sans-regular" onClick={() => closeMenu()}>
-        {navItem.title}
+      <NavLink to={navItem.url} onClick={() => closeMenu()}>
+        <span className="inria-sans-regular">{navItem.title}</span>
       </NavLink>
     </motion.li>
   );

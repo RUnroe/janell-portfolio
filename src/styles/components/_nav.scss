@@ -1,14 +1,3 @@
-nav {
-  a {
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 1.1rem;
-    border-bottom: 2px solid transparent;
-    &.active {
-      border-color: $primary-color-light;
-    }
-  }
-}
 
 
 nav.top-nav {
@@ -106,6 +95,9 @@ nav.mobile {
     height: 50px;
     border-radius: 50%;
     background: transparent;
+    &:hover {
+      background: transparent;
+    }
   }
   
   ul,
@@ -125,11 +117,28 @@ nav.mobile {
     list-style: none;
     margin-bottom: 20px;
     display: flex;
+    width: 100%;
     align-items: center;
     cursor: pointer;
 
     &.nested {
       padding-left: 1rem;
+    }
+
+
+    a {
+      display: block;
+      width: 100%;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 1.1rem;
+
+      span {
+        border-bottom: 2px solid transparent;
+      }
+      &.active span {
+        border-color: $primary-color-light;
+      }
     }
   }
   

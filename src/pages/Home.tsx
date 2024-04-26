@@ -33,7 +33,6 @@ const Home = () => {
 
   return (
     <PageLayout pageName="home-page">
-      <div className="header" ref={containerRef}></div>
       
         {/* <header className="header">
           <h1 className="text-uppercase text-large"><TextHighlight>Hello, </TextHighlight><TextHighlight> I'm Janell Rogers</TextHighlight></h1>
@@ -58,7 +57,7 @@ const Home = () => {
           </p>
         </FadeUpSection>
 
-        
+        <div className="detector" ref={containerRef}></div>
 
     </PageLayout>
   )
