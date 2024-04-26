@@ -25,6 +25,13 @@ const ContactForm = () => {
     return formattedMessage;
   }
 
+  const disableForm = () => {
+    //Let overlay animation finish before changing input field color (disabled)
+    setTimeout(() => { 
+      setFormDisabled(true);
+    }, 2000);
+  }
+
   const submitForm = (event: FormEvent<HTMLFormElement>) => {
     // This will prevent page refresh
     event.preventDefault();
@@ -46,24 +53,23 @@ const ContactForm = () => {
         } else {
           setError(res.message);
         }
-        //Let overlay animation finish before changing input field color (disabled)
-        setTimeout(() => { 
-          setFormDisabled(true);
-        }, 2000);
+        disableForm();
       })
-      .catch((error) => setError(error));
+      .catch((error) => {
+        setError(error);
+        disableForm();
+      });
   }
 
-  if (error) {
-    return <p>{error}</p>;
-  }
 
 
   return (
     <form onSubmit={submitForm} className="contact-form form dropshadow">
-      {submitted ? 
+      {(submitted || error) ? 
       <motion.div className="form-overlay" initial={{opacity: 0}} animate={{opacity: 1}}>
+        {submitted ? 
         <p>Your message has been sent,<br/> thank you for contacting me!</p>
+        : <p>{error}</p>}
       </motion.div> : null}
       
       <div className="flex">
