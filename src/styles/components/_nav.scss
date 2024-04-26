@@ -53,6 +53,10 @@ nav.top-nav {
       transform: translate(-50%, 0);
       left: 50%;
       width: max-content;
+
+      a {
+        padding: 0.25rem 0;
+      }
       
     }
   }

@@ -19,13 +19,13 @@ export const navigationStructure: LinkStructure[] = [
         children: null,
       },
       {
-        title: "Stage Managing",
-        url: "/experience/stage-managing",
+        title: "Acting",
+        url: "/experience/acting",
         children: null,
       },
       {
-        title: "Acting",
-        url: "/experience/acting",
+        title: "Other",
+        url: "/experience/other-experiences",
         children: null,
       },
     ],
