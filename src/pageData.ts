@@ -8,18 +8,7 @@ export default {
   },
   experience: {
     "directing": {
-      coverImageSrc: "",
-      projects: [
-        {
-          title: "",
-          imageSource: "",
-          dateString: "",
-          description: "",
-        }
-      ]
-    },
-    "stage-managing": {
-      coverImageSrc: "",
+      coverImageSrc: "https://picsum.photos/400/600",
       projects: [
         {
           title: "",
@@ -30,7 +19,7 @@ export default {
       ]
     },
     "acting": {
-      coverImageSrc: "",
+      coverImageSrc: "https://picsum.photos/400/600",
       projects: [
         {
           title: "The Little Mermaid",
@@ -39,7 +28,19 @@ export default {
           description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed imperdiet elit. Pellentesque maximus, nunc eget porttitor convallis, mi eros gravida dolor, vel pharetra sapien purus quis enim. Praesent malesuada, purus sed mattis posuere, erat justo scelerisque metus, a convallis quam arcu sed lacus. Donec imperdiet risus vel tellus vulputate, sed mollis nulla pellentesque. Nullam elementum sapien felis, id tempor diam mattis nec. Cras sit amet nisl mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris porttitor odio metus, eget scelerisque dui vulputate nec. In maximus interdum vehicula. Nullam vulputate feugiat tincidunt. Donec varius libero eu diam vestibulum, porttitor varius erat ornare.",
         }
       ]
-    }
+    },
+    "other": {
+      coverImageSrc: "https://picsum.photos/400/600",
+      projects: [
+        {
+          title: "",
+          imageSource: "",
+          dateString: "",
+          description: "",
+        }
+      ]
+    },
+    
   },
   resume: {
     pdf: {

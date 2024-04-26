@@ -13,6 +13,7 @@ import Resume from './pages/Resume';
 import Contact from './pages/Contact';
 
 import "./styles/app.scss";
+import { AnimatePresence } from 'framer-motion';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AnimatePresence mode='wait'>
+      <RouterProvider router={router} />
+    </AnimatePresence>
   </React.StrictMode>,
 )
