@@ -75,18 +75,21 @@ nav.top-nav {
 
 nav.mobile {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  bottom: 0;
+  // height: 100vh;
   width: 300px;
   z-index: 10;
 
+  .pointerEvents, .pointerEvents * {pointer-events: auto;}
+  .noPointerEvents, .noPointerEvents * {pointer-events: none;}
+
   .background {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    bottom: 0;
+    height: 100vh;
     width: 300px;
     background: #fff;
   }
@@ -159,6 +162,17 @@ nav.mobile {
     align-items: center;
     cursor: pointer;
   }
+}
+
+.screen {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $text-color-primary;
+  opacity: 0.1;
+  z-index: 9;
 }
 
 @media all and (max-width: $layout-breakpoint-tablet) {
