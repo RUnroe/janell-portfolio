@@ -97,6 +97,7 @@ const MobileTopNavMenu = () => {
     className="screen" 
     onClick={() => setIsOpen(false)}
     variants={screen}
+    initial={"closed"}
     animate={isOpen ? "open" : "closed"}
     style={{ pointerEvents: isOpen ? "auto" : "none" }}
     ></motion.div>
