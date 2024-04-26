@@ -18,7 +18,7 @@ const MobileTopNavMenu = () => {
   const sidebar = {
     open: (height = 1000) => ({
       clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
-      height: height * 2 + 200,
+      height: height + 200,
       transition: {
         // clipPath: {delay: 0.2},
         type: "spring",
