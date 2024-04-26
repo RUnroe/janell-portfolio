@@ -1,9 +1,11 @@
 import { FormEvent, useState } from "react";
 import FormInput from "./FormInput";
+import { motion } from "framer-motion";
 
 const ContactForm = () => {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
+  const [formDisabled, setFormDisabled] = useState(false);
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -11,6 +13,8 @@ const ContactForm = () => {
     email: "",
     message: "",
   });
+
+
 
   const updateFormData = (field: string, value: string) => {
     setFormData({...formData, [field]: value});
@@ -25,7 +29,8 @@ const ContactForm = () => {
     // This will prevent page refresh
     event.preventDefault();
 
-    // replace this with your own unique endpoint URL
+
+    // Form carry email post
     fetch("https://formcarry.com/s/S0f-9erRpJ4", {
       method: "POST",
       headers: {
@@ -41,6 +46,10 @@ const ContactForm = () => {
         } else {
           setError(res.message);
         }
+        //Let overlay animation finish before changing input field color (disabled)
+        setTimeout(() => { 
+          setFormDisabled(true);
+        }, 2000);
       })
       .catch((error) => setError(error));
   }
@@ -49,12 +58,14 @@ const ContactForm = () => {
     return <p>{error}</p>;
   }
 
-  if (submitted) {
-    return <p>We've received your message, thank you for contacting us!</p>;
-  }
 
   return (
     <form onSubmit={submitForm} className="contact-form form dropshadow">
+      {submitted ? 
+      <motion.div className="form-overlay" initial={{opacity: 0}} animate={{opacity: 1}}>
+        <p>Your message has been sent,<br/> thank you for contacting me!</p>
+      </motion.div> : null}
+      
       <div className="flex">
         <FormInput 
           field={"firstName"}
@@ -62,6 +73,7 @@ const ContactForm = () => {
           type={"text"}
           updateFormData={updateFormData}
           required={true}
+          disabled={formDisabled}
         />
         <FormInput 
           field={"lastName"}
@@ -69,6 +81,7 @@ const ContactForm = () => {
           type={"text"}
           updateFormData={updateFormData}
           required={true}
+          disabled={formDisabled}
         />
       </div>
       <FormInput 
@@ -77,6 +90,7 @@ const ContactForm = () => {
         type={"email"}
         updateFormData={updateFormData}
         required={true}
+        disabled={formDisabled}
       />
 
       <FormInput 
@@ -85,9 +99,13 @@ const ContactForm = () => {
         type={"textarea"}
         updateFormData={updateFormData}
         required={true}
+        disabled={formDisabled}
       />
+      
+      
+      <button type="submit" disabled={formDisabled}>Send</button>
 
-      <button type="submit">Send</button>
+      
     </form>
   );
 }

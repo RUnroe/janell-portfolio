@@ -5,10 +5,11 @@ interface Props {
   value: string,
   type: string,
   required?: boolean,
+  disabled?: boolean,
   updateFormData: (field: string, value: string) => void,
 }
 
-const FormInput = ({field, value, type, updateFormData, required = false}: Props) => {
+const FormInput = ({field, value, type, updateFormData, required = false, disabled = false}: Props) => {
   return ( 
     <div className="form-group">
       <label htmlFor={field} className="inria-sans-bold">{camelCaseToWords(field)} {required ? <span className="asterisk">*</span> : ""}</label>
@@ -18,6 +19,7 @@ const FormInput = ({field, value, type, updateFormData, required = false}: Props
           value={value}
           onChange={(e) => updateFormData(field, e.target.value)}
           required={required}
+          disabled={disabled}
         />
         :
         <input
@@ -26,6 +28,7 @@ const FormInput = ({field, value, type, updateFormData, required = false}: Props
           value={value}
           onChange={(e) => updateFormData(field, e.target.value)}
           required={required}
+          disabled={disabled}
         />
       }
     </div>
