@@ -5,17 +5,42 @@ import headshot from "../assets/images/headshot.jpg";
 import SocialRow from "../components/socials/SocialRow";
 import AnimatedHeader from "../components/text/AnimatedHeader";
 import FadeUpSection from "../components/layout/animation/FadeUpSection";
+import { useEffect, useRef, useState } from "react";
 
 const Home = () => {
+  const containerRef = useRef(null);
+  const [textList, setTextList] = useState<string[] | null>(null);
+
+  useEffect(() => {
+    let width = 0;
+    if(containerRef && containerRef.current) {
+      width = containerRef.current["offsetWidth"];
+    }
+    if(width) setTextList(getTextListByScreenSize(width));
+  }, [containerRef]);
+
+  
+
+  const getTextListByScreenSize = (width: number) => {
+    if(width < 350) {
+      return ["Hello,", "I'm", "Janell", "Rogers"];
+    }
+    if(width < 500) {
+      return ["Hello, I'm", "Janell Rogers"];
+    }
+    return ["Hello,", "I'm Janell Rogers"];
+  }
 
   return (
     <PageLayout pageName="home-page">
+      <div className="header" ref={containerRef}></div>
       
         {/* <header className="header">
           <h1 className="text-uppercase text-large"><TextHighlight>Hello, </TextHighlight><TextHighlight> I'm Janell Rogers</TextHighlight></h1>
         </header> */}
-        <AnimatedHeader textList={["Hello,", "I'm Janell Rogers"]} containerClassName="header" headerClassName={"text-uppercase text-large"}/>
-
+        {textList ? 
+          <AnimatedHeader textList={textList} containerClassName="header" headerClassName={"text-uppercase text-large"}/>
+        : null}
         <aside className="headshot">
           <FadeUpSection delay={0.25}>
             <img className="dropshadow border-radius" src={headshot} />
