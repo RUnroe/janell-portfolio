@@ -2,9 +2,6 @@ import 'normalize.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
-  BrowserRouter,
-  // createBrowserRouter,
-  // RouterProvider,
   Routes,
   Route,
   useLocation,
