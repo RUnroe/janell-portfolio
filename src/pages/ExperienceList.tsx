@@ -1,26 +1,38 @@
+import { motion } from "framer-motion";
+import { WaveBGIcon } from "../assets/icons/icons";
 import ExperienceCard from "../components/experience/ExperienceCard";
-import PageLayout from "../components/layout/PageLayout";
+import Container from "../components/layout/Container";
 import AnimatedHeader from "../components/text/AnimatedHeader";
 import pageData from "../pageData";
 import toFriendlyName from "../util/text/toFriendlyName";
 
 
 const ExperienceList = () => {
-
+  
   return (
-    <PageLayout pageName="experience-list-page">
-      <header className="header-title">
-        <AnimatedHeader textList={["Experience"]} />
-      </header>
 
-      <section className="flex-list">
-        {Object.entries(pageData.experience).map(([key, value]) => (
-          <ExperienceCard title={toFriendlyName(key)} imageSrc={value.coverImageSrc} />
-        ))}
+    < >
+      {/* <TopNavMenu /> */}
+      <motion.main className={`experience-list-page page-main grid-layout`} >
         
-      </section>
-     
-   </PageLayout>
+        <Container>
+          <header className="header-title">
+          <AnimatedHeader textList={["Experience"]} />
+        </header>
+
+        <section className="flex-list">
+          {Object.entries(pageData.experience).map(([key, value]) => (
+            <motion.div>
+              <ExperienceCard title={toFriendlyName(key)} imageSrc={value.coverImageSrc}  />
+            </motion.div>
+            
+          ))}
+          
+        </section>
+        </Container>
+      </motion.main>
+      <WaveBGIcon />
+    </>
   )
 }
 

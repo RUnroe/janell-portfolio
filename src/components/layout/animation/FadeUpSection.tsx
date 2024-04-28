@@ -30,7 +30,7 @@ const FadeUpSection = ({sectionClassName = "", delay = 0, children}: Props) => {
   }
 
   return (  
-  <motion.section className={sectionClassName} animate={animate} initial={initial} transition={transition} exit={initial}>
+  <motion.section className={sectionClassName} animate={animate} initial={initial} transition={transition} exit={{}}>
     {children}
   </motion.section>
 

@@ -2,7 +2,14 @@ import 'normalize.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
+  BrowserRouter,
+  // createBrowserRouter,
+  // RouterProvider,
+  Routes,
+  Route,
+  useLocation,
   createBrowserRouter,
+  createRoutesFromElements,
   RouterProvider,
 } from "react-router-dom";
 
@@ -14,34 +21,34 @@ import Contact from './pages/Contact';
 
 import "./styles/app.scss";
 import { AnimatePresence } from 'framer-motion';
+import AnimatedPage from './components/layout/animation/AnimatedPage';
+import TopNavMenu from './components/navigation/TopNavMenu';
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home/>,
-  },
-  {
-    path: "/experience",
-    element: <ExperienceList/>,
-  },
-  {
-    path: "/experience/:section",
-    element: <ExperienceSingle/>,
-  },
-  {
-    path: "/resume",
-    element: <Resume/>,
-  },
-  {
-    path: "/contact",
-    element: <Contact/>,
-  },
-]);
+
+const App = () => {
+  const location = useLocation();
+  const locationArr = location.pathname;
+
+  return (
+    <React.StrictMode>
+      <TopNavMenu />
+      <AnimatePresence mode='wait' initial={true}>
+        <Routes location={location} key={locationArr}>
+          <Route path="/" element={<AnimatedPage><Home/></AnimatedPage>} />
+          <Route path="/experience/:section" element={<AnimatedPage><ExperienceSingle/></AnimatedPage>} />
+          <Route path="/experience" element={<AnimatedPage><ExperienceList/></AnimatedPage>} />
+          <Route path="/resume" element={<AnimatedPage><Resume/></AnimatedPage>} />
+          <Route path="/contact" element={<AnimatedPage><Contact/></AnimatedPage>} />
+        </Routes>
+      </AnimatePresence>
+  </React.StrictMode>
+  )
+}
+
+const router = createBrowserRouter(
+  createRoutesFromElements(<Route path="*" element={<App />} />)
+);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <AnimatePresence mode='wait'>
-      <RouterProvider router={router} />
-    </AnimatePresence>
-  </React.StrictMode>,
+  <RouterProvider router={router} />,
 )

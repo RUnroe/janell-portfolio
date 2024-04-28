@@ -1,5 +1,4 @@
 import { ReactNode, RefObject } from "react";
-import TopNavMenu from "../navigation/TopNavMenu";
 import Container from "./Container";
 import { WaveBGIcon } from "../../assets/icons/icons";
 
@@ -12,7 +11,7 @@ interface Props {
 const PageLayout = ({children, pageName, ref}: Props) => {
   return (  
     <>
-      <TopNavMenu />
+      {/* <TopNavMenu /> */}
       <main className={`${pageName} page-main grid-layout`} ref={ref}>
         
         <Container>

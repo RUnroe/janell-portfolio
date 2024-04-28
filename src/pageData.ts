@@ -8,7 +8,7 @@ export default {
   },
   experience: {
     "directing": {
-      coverImageSrc: "https://picsum.photos/400/600",
+      coverImageSrc: "https://picsum.photos/600/700",
       projects: [
         {
           title: "",
@@ -19,7 +19,7 @@ export default {
       ]
     },
     "acting": {
-      coverImageSrc: "https://picsum.photos/400/600",
+      coverImageSrc: "https://picsum.photos/600/500",
       projects: [
         {
           title: "The Little Mermaid",
@@ -30,7 +30,7 @@ export default {
       ]
     },
     "other": {
-      coverImageSrc: "https://picsum.photos/400/600",
+      coverImageSrc: "/stage_management.jpg",
       projects: [
         {
           title: "",
