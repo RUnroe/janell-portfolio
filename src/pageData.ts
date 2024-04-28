@@ -4,7 +4,7 @@ export default {
   home: {
     imageSrc: "",
     headline: "Director  |  Stage Manager  |  Actor  |  Singer  |  Artist",
-    bio: "Janell is a senior at the University of Utah working on her BA in theatre studies. She is very excited to be a part of helping create this amazing show as an Assistant Director. Some of her work includes being the dramaturg for The Lightning Thief: The Percy Jackson Musical at the University of Utah, directing Gay Girls with Umbrella Theatre Company in The New Works Mentorship Project,  Near Mint- a new production with the New Play Workshop class in the Department of Theatre, and directed a short version of The Tempest for Egyptian Youtheatre."
+    bio: "Janell Rogers is a dedicated professional with a Bachelor's degree in Theatre Studies from the University of Utah. With a diverse skill set encompassing directing, acting, and other expertise encompassing various aspects of theatre production, including dramaturgy, and production assistance. Janell brings a comprehensive understanding of the theatrical arts to every project. Her passion for storytelling and her commitment to excellence drive her work, ensuring the successful execution of creative visions on stage. Janell's collaborative approach, combined with her strong communication skills and attention to detail, makes her a valuable asset in any theatrical production. With a proven track record of delivering high-quality performances and productions, Janell Rogers is poised to continue making significant contributions to the world of theatre."
   },
   experience: {
     "directing": {
