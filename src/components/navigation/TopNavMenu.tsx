@@ -2,6 +2,8 @@ import React from "react";
 import LinkStructure from "../../types/LinkStructure";
 import NavItem from "./NavItem";
 import MobileTopNavMenu from "./MobileTopNavMenu";
+import pageData from "../../pageData";
+import toFriendlyName from "../../util/text/toFriendlyName";
 
 export const navigationStructure: LinkStructure[] = [
   {
@@ -12,23 +14,11 @@ export const navigationStructure: LinkStructure[] = [
   {
     title: "Experience",
     url: "/experience",
-    children: [
-      {
-        title: "Directing",
-        url: "/experience/directing",
-        children: null,
-      },
-      {
-        title: "Acting",
-        url: "/experience/acting",
-        children: null,
-      },
-      {
-        title: "Other",
-        url: "/experience/other-experiences",
-        children: null,
-      },
-    ],
+    children: Object.keys(pageData.experience).map((pageName) => ({
+      title: toFriendlyName(pageName),
+      url: `/experience/${pageName}`,
+      children: null,
+    }))
   },
   {
     title: "Resume",

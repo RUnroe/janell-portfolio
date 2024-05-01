@@ -23,7 +23,7 @@ const ExperienceList = () => {
         <section className="flex-list">
           {Object.entries(pageData.experience).map(([key, value]) => (
             <motion.div>
-              <ExperienceCard title={toFriendlyName(key)} imageSrc={value.coverImageSrc}  />
+              <ExperienceCard title={toFriendlyName(key)} urlParam={key} imageSrc={value.coverImageSrc}  />
             </motion.div>
             
           ))}
