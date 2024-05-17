@@ -1,3 +1,5 @@
+import Container from "../layout/Container";
+import AnimatedHeader from "../text/AnimatedHeader";
 
 interface Props {
   title: string,
@@ -12,17 +14,25 @@ const ProjectSection = ({title, date, description, imageSrc, index}: Props) => {
   
   const renderImage = () => {
     return (
-      <img src={imageSrc} alt={`${title} image`}/>
+      <div className="media-container">
+        <img 
+          src={imageSrc} 
+          className="media"
+          alt={`${title} image`} 
+          title={`${title} image`}
+        />
+      </div>
     )
   }
 
   return ( 
-    <section className="project-section">
+    <Container>
+    <section className={`project-section experience-grid-layout ${imageOnLeftSide ? "left" : "right"}`}>
       {imageOnLeftSide && renderImage()} 
-      <div>
+      <div className="text-container">
         <div className="title-row">
-          <h2>{title}</h2>
-          <span className="date">{date}</span>
+          <AnimatedHeader textList={[title]} tag={"h2"}/>
+          <span className="date inria-sans-bold">{date}</span>
         </div>
         <p>{description}</p>
 
@@ -30,6 +40,7 @@ const ProjectSection = ({title, date, description, imageSrc, index}: Props) => {
       {!imageOnLeftSide && renderImage()}
 
     </section> 
+    </Container>
   );
 }
  

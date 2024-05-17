@@ -77,21 +77,94 @@
     justify-content: center;
     align-items: center;
     min-height: 200px;
-    height: 100%;
+    height: 40vh;
     max-height: 60vh;
+
 
     h1 {
       background-color: $primary-color-light;
       padding: 1rem 2rem;
       border-radius: $border-radius;
     }
+
+
   }
 
   .project-section {
+
+    
+
+    .title-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      h2 {
+        margin: 0;
+      }
+    }
+    
+    .media-container {
+      // width: 40%;
+      // height: 80%;
+      max-height: 30rem;
+      object-fit: contain;
+      object-position: 50% 50%;
+      overflow: hidden;
+      .media {
+        height: auto;
+        width: 100%;
+        object-fit: contain;
+
+      }
+    }
+  }
+
+  
+}
+
+
+.experience-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  &.right {
+    .text-container {
+      grid-column: 1 / 6;
+    }
+    .media-container {
+      grid-column: 7 / 11;
+    }
+  }
+  &.left {
+    .media-container {
+      grid-column: 1 / 5;
+    }
+    .text-container {
+      grid-column: 6 / 11;
+    }
+  }
+  
+}
+
+@media all and (max-width: $layout-breakpoint-tablet) {
+  .experience-grid-layout {
     display: flex;
-    gap: 4rem;
+    flex-direction: column;
+    &.left {
+      flex-direction: column-reverse;
+    }
   }
 }
+
+
+@media all and (max-width: $layout-breakpoint-mobile) {
+  .experience-grid-layout {
+    display: flex;
+
+  }
+}
+
+
 
 
 @media all and (max-width: $layout-breakpoint-laptop) {
