@@ -7,6 +7,8 @@ import AnimatedHeader from "../components/text/AnimatedHeader";
 import FadeUpSection from "../components/layout/animation/FadeUpSection";
 import { useEffect, useRef, useState } from "react";
 
+import { CmsHeader, HeaderType } from "react-simple-cms";
+
 const Home = () => {
   const containerRef = useRef(null);
   const [textList, setTextList] = useState<string[] | null>(null);
@@ -30,9 +32,14 @@ const Home = () => {
     }
     return ["Hello,", "I'm Janell Rogers"];
   }
-
+  const [tempText, setTempText] = useState("Yo");
   return (
     <PageLayout pageName="home-page">
+
+{/* !!Temp!! */}
+      <input type="text" onChange={e => setTempText(e.target.value)} value={tempText} />
+      <CmsHeader inputs={{text: tempText, type: HeaderType.h1}} />
+{/* ---!!Temp!! */}
       
         {/* <header className="header">
           <h1 className="text-uppercase text-large"><TextHighlight>Hello, </TextHighlight><TextHighlight> I'm Janell Rogers</TextHighlight></h1>
