@@ -6,7 +6,7 @@ import AnimatedHeader from "../components/text/AnimatedHeader";
 import FadeUpSection from "../components/layout/animation/FadeUpSection";
 import { useEffect, useRef, useState } from "react";
 
-import { CmsHeader, CmsText, HeaderType } from "react-simple-cms";
+import { CmsHeader, CmsText } from "react-simple-cms";
 
 const Home = () => {
   const containerRef = useRef(null);
@@ -33,12 +33,6 @@ const Home = () => {
   }
   return (
     <PageLayout pageName="home-page">
-
-
-      
-        {/* <header className="header">
-          <h1 className="text-uppercase text-large"><TextHighlight>Hello, </TextHighlight><TextHighlight> I'm Janell Rogers</TextHighlight></h1>
-        </header> */}
         {textList ? 
           <AnimatedHeader textList={textList} containerClassName="header" headerClassName={"text-uppercase text-large"}/>
         : null}
@@ -51,7 +45,7 @@ const Home = () => {
         
         <FadeUpSection sectionClassName="about-content" delay={0.5}>
           {/* <p className="headline sub-header text-center">{pageData.pages.home.headline.text}</p> */}
-          <CmsHeader className="headline sub-header text-center" inputs={{type: HeaderType.h3}} cmsKey="headline"/>
+          <CmsHeader className="headline sub-header text-center" cmsKey="headline"/>
           <SocialRow />
 
           {/* <p className="bio text-justify">

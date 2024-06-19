@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
 import { CmsPage } from "react-simple-cms";
-import pageData from "../../../pageData";
+import TopNavMenu from "../../navigation/TopNavMenu";
 
 interface Props {
   pageKey: string,
@@ -23,7 +23,8 @@ const AnimatedPage = ({pageKey, children}: Props) => {
 
   return ( 
     <motion.main initial={"initial"} animate={"animate"} exit={"exit"} variants={variants}>
-      <CmsPage inEditMode={true} pageKey={pageKey} siteData={pageData}>
+      <CmsPage inEditMode={true} pageKey={pageKey}>
+      <TopNavMenu />
       {children}
       </CmsPage>
     </motion.main>
