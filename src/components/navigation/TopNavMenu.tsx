@@ -14,7 +14,7 @@ export const navigationStructure: LinkStructure[] = [
   {
     title: "Experience",
     url: "/experience",
-    children: Object.keys(pageData.experience).map((pageName) => ({
+    children: Object.keys(pageData.pages.experience).map((pageName) => ({
       title: toFriendlyName(pageName),
       url: `/experience/${pageName}`,
       children: null,

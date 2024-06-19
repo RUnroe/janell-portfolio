@@ -12,8 +12,8 @@ const ExperienceSingle = () => {
 
   useEffect(() => {
     if(section) {
-      if(hasOwnProperty(pageData.experience, section)) {
-        setSectionData(pageData.experience?.[section]);
+      if(hasOwnProperty(pageData.pages.experience, section)) {
+        setSectionData(pageData.pages.experience?.[section]);
       }
       else {
         navigate("/");

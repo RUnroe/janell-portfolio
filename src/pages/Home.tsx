@@ -7,7 +7,7 @@ import AnimatedHeader from "../components/text/AnimatedHeader";
 import FadeUpSection from "../components/layout/animation/FadeUpSection";
 import { useEffect, useRef, useState } from "react";
 
-import { CmsHeader, HeaderType } from "react-simple-cms";
+import { CmsHeader, CmsText, HeaderType } from "react-simple-cms";
 
 const Home = () => {
   const containerRef = useRef(null);
@@ -32,14 +32,10 @@ const Home = () => {
     }
     return ["Hello,", "I'm Janell Rogers"];
   }
-  const [tempText, setTempText] = useState("Yo");
   return (
     <PageLayout pageName="home-page">
 
-{/* !!Temp!! */}
-      <input type="text" onChange={e => setTempText(e.target.value)} value={tempText} />
-      <CmsHeader inputs={{text: tempText, type: HeaderType.h1}} />
-{/* ---!!Temp!! */}
+
       
         {/* <header className="header">
           <h1 className="text-uppercase text-large"><TextHighlight>Hello, </TextHighlight><TextHighlight> I'm Janell Rogers</TextHighlight></h1>
@@ -55,13 +51,14 @@ const Home = () => {
         
         
         <FadeUpSection sectionClassName="about-content" delay={0.5}>
-          <p className="headline sub-header text-center">{pageData.home.headline}</p>
-
+          {/* <p className="headline sub-header text-center">{pageData.pages.home.headline.text}</p> */}
+          <CmsHeader className="headline sub-header text-center" inputs={{type: HeaderType.h3}} cmsKey="headline"/>
           <SocialRow />
 
-          <p className="bio text-justify">
-            {pageData.home.bio}
-          </p>
+          {/* <p className="bio text-justify">
+            {pageData.pages.home.bio.text}
+          </p> */}
+          <CmsText className="bio text-justify" cmsKey="bio" />
         </FadeUpSection>
 
         <div className="detector" ref={containerRef}></div>

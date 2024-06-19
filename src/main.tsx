@@ -31,11 +31,11 @@ const App = () => {
       <TopNavMenu />
       <AnimatePresence mode='wait' initial={true}>
         <Routes location={location} key={locationArr}>
-          <Route path="/" element={<AnimatedPage><Home/></AnimatedPage>} />
-          <Route path="/experience/:section" element={<AnimatedPage><ExperienceSingle/></AnimatedPage>} />
-          <Route path="/experience" element={<AnimatedPage><ExperienceList/></AnimatedPage>} />
-          <Route path="/resume" element={<AnimatedPage><Resume/></AnimatedPage>} />
-          <Route path="/contact" element={<AnimatedPage><Contact/></AnimatedPage>} />
+          <Route path="/" element={<AnimatedPage pageKey="home"><Home/></AnimatedPage>} />
+          <Route path="/experience/:section" element={<AnimatedPage pageKey="experienceSingle"><ExperienceSingle/></AnimatedPage>} />
+          <Route path="/experience" element={<AnimatedPage pageKey="experienceList"><ExperienceList/></AnimatedPage>} />
+          <Route path="/resume" element={<AnimatedPage pageKey="resume"><Resume/></AnimatedPage>} />
+          <Route path="/contact" element={<AnimatedPage pageKey="contact"><Contact/></AnimatedPage>} />
         </Routes>
       </AnimatePresence>
   </React.StrictMode>

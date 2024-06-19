@@ -30,7 +30,7 @@ const SocialRow = () => {
       <hr className="center-bg-bar" />
 
       <motion.div className="socials-container" variants={variants} animate="animate" initial="initial">
-        {pageData.contact.socials.map((socialInfo, index) => (
+        {pageData.pages.contact.socials.map((socialInfo, index) => (
             <SocialIcon 
               title={`${socialInfo.title} - ${socialInfo.username}`}
               url={socialInfo.url}

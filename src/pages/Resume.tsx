@@ -16,7 +16,7 @@ const Resume = () => {
         <div className="pdf-container">
           <iframe 
             className={"pdf"} 
-            src={pageData.resume.pdf.src}
+            src={pageData.pages.resume.pdf.src}
             width="100%" height="100%" 
             allow="autoplay">
           </iframe>
