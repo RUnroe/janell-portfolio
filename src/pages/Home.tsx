@@ -1,5 +1,4 @@
 import PageLayout from "../components/layout/PageLayout";
-import pageData from "../pageData";
 
 import headshot from "../assets/images/headshot.jpg";
 import SocialRow from "../components/socials/SocialRow";
