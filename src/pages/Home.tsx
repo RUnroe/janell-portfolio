@@ -6,7 +6,7 @@ import AnimatedHeader from "../components/text/AnimatedHeader";
 import FadeUpSection from "../components/layout/animation/FadeUpSection";
 import { useEffect, useRef, useState } from "react";
 
-import { CmsHeader, CmsText } from "react-simple-cms";
+import { CmsHeader, CmsImage, CmsText } from "react-simple-cms";
 
 const Home = () => {
   const containerRef = useRef(null);
@@ -39,6 +39,7 @@ const Home = () => {
         <aside className="headshot">
           <FadeUpSection delay={0.25}>
             <img className="dropshadow border-radius" src={headshot} />
+            <CmsImage alt="Headshot" cmsKey="headshot"/>
           </FadeUpSection>
         </aside>
         

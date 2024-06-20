@@ -3,7 +3,7 @@ import { FacebookIcon, InstagramIcon, MailIcon } from "./assets/icons/icons";
 export default {
   pages: {
     home: {
-      imageSrc: "",
+      headshot: {src: ""},
       headline: {text: "Director  |  Stage Manager  |  Actor  |  Singer  |  Artist", type: "h3"},
       bio: {text: "<p>Janell Rogers is a dedicated professional with a Bachelor's degree in Theatre Studies from the University of Utah. With a diverse skill set encompassing directing, acting, and other expertise encompassing various aspects of theatre production, including dramaturgy, and production assistance. Janell brings a comprehensive understanding of the theatrical arts to every project. Her passion for storytelling and her commitment to excellence drive her work, ensuring the successful execution of creative visions on stage. Janell's collaborative approach, combined with her strong communication skills and attention to detail, makes her a valuable asset in any theatrical production. With a proven track record of delivering high-quality performances and productions, Janell Rogers is poised to continue making significant contributions to the world of theatre.</p>"},
     },

@@ -27,9 +27,13 @@ const App = () => {
   const location = useLocation();
   const locationArr = location.pathname;
 
+  const fileUploadCallback = (files: FileList) => {
+    console.log("Send files to backend here", files);
+  }
+
   return (
     <React.StrictMode>
-      <CmsProvider siteData={pageData}>
+      <CmsProvider siteData={pageData} fileUploadCallback={fileUploadCallback}>
         <AnimatePresence mode='wait' initial={true}>
           <Routes location={location} key={locationArr}>
             <Route path="/" element={<AnimatedPage pageKey="home"><Home/></AnimatedPage>} />
