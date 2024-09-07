@@ -91,7 +91,7 @@
   }
 
   .project-section {
-
+    margin-top: 2rem;
     
 
     .title-row {
@@ -116,6 +116,10 @@
         width: 100%;
         object-fit: contain;
 
+      }
+      iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
       }
     }
   }

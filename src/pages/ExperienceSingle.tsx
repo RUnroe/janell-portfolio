@@ -34,7 +34,7 @@ const ExperienceSingle = () => {
                 title={project.title}
                 date={project.dateString}
                 description={project.description} 
-                imageSrc={project.imageSrc}
+                media={project.media}
                 index={index}
               />
             ))}

@@ -1,3 +1,4 @@
+import { Media } from "../../types/mediaStructure";
 import Container from "../layout/Container";
 import AnimatedHeader from "../text/AnimatedHeader";
 
@@ -5,14 +6,14 @@ interface Props {
   title: string,
   date: string,
   description: string,
-  imageSrc: string,
+  media: Media,
   index: number,
 }
 
-const ProjectSection = ({title, date, description, imageSrc, index}: Props) => {
+const ProjectSection = ({title, date, description, media, index}: Props) => {
   const imageOnLeftSide = index % 2 === 1;
   
-  const renderImage = () => {
+  const renderImage = (imageSrc: string) => {
     return (
       <div className="media-container">
         <img 
@@ -22,13 +23,29 @@ const ProjectSection = ({title, date, description, imageSrc, index}: Props) => {
           title={`${title} image`}
         />
       </div>
+    );
+  }
+
+  const renderVideo = (videoSrc: string) => {
+    return (
+      <div className="media-container">
+        <iframe title="YouTube video player" src={videoSrc} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+      </div>
     )
+  }
+
+  const renderMedia = () => {
+    if(media.type === "video") {
+      return renderVideo(media.src);
+    }
+    return renderImage(media.src);
+    
   }
 
   return ( 
     <Container>
     <section className={`project-section experience-grid-layout ${imageOnLeftSide ? "left" : "right"}`}>
-      {imageOnLeftSide && renderImage()} 
+      {imageOnLeftSide && renderMedia()} 
       <div className="text-container">
         <div className="title-row">
           <AnimatedHeader textList={[title]} tag={"h2"}/>
@@ -37,7 +54,7 @@ const ProjectSection = ({title, date, description, imageSrc, index}: Props) => {
         <p>{description}</p>
 
       </div>
-      {!imageOnLeftSide && renderImage()}
+      {!imageOnLeftSide && renderMedia()}
 
     </section> 
     </Container>
