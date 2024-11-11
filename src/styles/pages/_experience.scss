@@ -103,6 +103,13 @@
         margin: 0;
       }
     }
+
+    .subline {
+      p {
+        color: $primary-color-dark;
+        margin: 0.25rem 0;
+      }
+    }
     
     .media-container {
       // width: 40%;

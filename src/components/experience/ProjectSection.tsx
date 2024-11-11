@@ -3,7 +3,7 @@ import Container from "../layout/Container";
 import AnimatedHeader from "../text/AnimatedHeader";
 
 interface Props {
-  title: string,
+  title: string[] | string,
   subline: string[] | string,
   date: string,
   description: string,
@@ -49,12 +49,12 @@ const ProjectSection = ({title, subline, date, description, media, index}: Props
       {imageOnLeftSide && renderMedia()} 
       <div className="text-container">
         <div className="title-row">
-          <AnimatedHeader textList={[title]} tag={"h2"}/>
+          <AnimatedHeader textList={Array.isArray(title) ? title : [title]} tag={"h2"}/>
           <span className="date inria-sans-bold">{date}</span>
         </div>
         {subline?.length && 
           <div className="subline">
-            {Array.isArray(subline) ? subline.map(line => <p>{line}</p>) : <p>{subline}</p>}
+            {Array.isArray(subline) ? subline.map(line => <p className="inria-sans-bold">{line}</p>) : <p className="inria-sans-bold">{subline}</p>}
           </div>
         }
         <p>{description}</p>
