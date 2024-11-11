@@ -4,13 +4,14 @@ import AnimatedHeader from "../text/AnimatedHeader";
 
 interface Props {
   title: string,
+  subline: string[] | string,
   date: string,
   description: string,
   media: Media,
   index: number,
 }
 
-const ProjectSection = ({title, date, description, media, index}: Props) => {
+const ProjectSection = ({title, subline, date, description, media, index}: Props) => {
   const imageOnLeftSide = index % 2 === 1;
   
   const renderImage = (imageSrc: string) => {
@@ -51,6 +52,11 @@ const ProjectSection = ({title, date, description, media, index}: Props) => {
           <AnimatedHeader textList={[title]} tag={"h2"}/>
           <span className="date inria-sans-bold">{date}</span>
         </div>
+        {subline?.length && 
+          <div className="subline">
+            {Array.isArray(subline) ? subline.map(line => <p>{line}</p>) : <p>{subline}</p>}
+          </div>
+        }
         <p>{description}</p>
 
       </div>

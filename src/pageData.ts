@@ -9,10 +9,11 @@ export default {
   experience: {
     "directing": {
       pageTitle: "Directing",
-      coverImageSrc: "https://picsum.photos/600/700",
+      coverImageSrc: "/directing.jpg",
       projects: [
         {
           title: "",
+          subline: [""],
           media: 
             {
               type: "image",
@@ -23,32 +24,45 @@ export default {
         }
       ]
     },
+
+
+
+
+
+
     "acting": {
       pageTitle: "Acting",
-      coverImageSrc: "https://picsum.photos/600/500",
+      coverImageSrc: "/acting.jpg",
       projects: [
         {
           title: "The Little Mermaid",
+          subline: ["Murray Arts Counsil · Directed by Candy Tippets", "Charaters: Princess / Ensemble"],
           media: 
             {
               type: "image",
-              src: "https://picsum.photos/600/900",
+              src: "/projects/the-little-mermaid/IMG_9357.jpg",
             },
-          dateString: "07 · 05 · 2022",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed imperdiet elit. Pellentesque maximus, nunc eget porttitor convallis, mi eros gravida dolor, vel pharetra sapien purus quis enim. Praesent malesuada, purus sed mattis posuere, erat justo scelerisque metus, a convallis quam arcu sed lacus. Donec imperdiet risus vel tellus vulputate, sed mollis nulla pellentesque. Nullam elementum sapien felis, id tempor diam mattis nec. Cras sit amet nisl mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris porttitor odio metus, eget scelerisque dui vulputate nec. In maximus interdum vehicula. Nullam vulputate feugiat tincidunt. Donec varius libero eu diam vestibulum, porttitor varius erat ornare.",
+          dateString: "07 · 2021",
+          description: "The Little Mermaid musical is a stage adaptation of Disney’s classic film, following Ariel, a young mermaid who dreams of life on land. Defying her father, King Triton, she makes a deal with the sea witch Ursula to trade her voice for human legs and pursue her love, Prince Eric. With iconic songs like “Part of Your World” and “Under the Sea,” the show explores themes of adventure, sacrifice, and following one's heart, captivating audiences with its vibrant characters and heartfelt story.",
         },
         {
-          title: "The Little Mermaid",
+          title: "Cinderella",
+          subline: ["Murray Arts Counsil · Directed by Candy Tippets", "Charaters: Dragon / Ensemble"],
           media:
             {
               type: "video",
               src: "https://www.youtube.com/embed/jfKfPfyJRdk?si=c5QQ5E92D5L-T_LP",
             },
-          dateString: "07 · 05 · 2022",
-          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed imperdiet elit. Pellentesque maximus, nunc eget porttitor convallis, mi eros gravida dolor, vel pharetra sapien purus quis enim. Praesent malesuada, purus sed mattis posuere, erat justo scelerisque metus, a convallis quam arcu sed lacus. Donec imperdiet risus vel tellus vulputate, sed mollis nulla pellentesque. Nullam elementum sapien felis, id tempor diam mattis nec. Cras sit amet nisl mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris porttitor odio metus, eget scelerisque dui vulputate nec. In maximus interdum vehicula. Nullam vulputate feugiat tincidunt. Donec varius libero eu diam vestibulum, porttitor varius erat ornare.",
+          dateString: "07 · 2023",
+          description: "Rodgers and Hammerstein’s Cinderella is a musical adaptation of the classic fairy tale, where a kind young woman, mistreated by her stepfamily, is transformed by her Fairy Godmother to attend a royal ball. There, she captures the heart of Prince Charming. Featuring beloved songs like “In My Own Little Corner” and “Ten Minutes Ago,” the musical highlights themes of hope, kindness, and believing in the impossible, enchanting audiences with its timeless story and memorable score.",
         }
       ]
     },
+
+
+
+
+
     "other": {
       pageTitle: "Other Experiences",
       coverImageSrc: "/stage_management.jpg",

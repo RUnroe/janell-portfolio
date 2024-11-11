@@ -32,6 +32,7 @@ const ExperienceSingle = () => {
             {sectionData.projects.map((project: any, index: number) => (
               <ProjectSection
                 title={project.title}
+                subline={project.subline}
                 date={project.dateString}
                 description={project.description} 
                 media={project.media}
