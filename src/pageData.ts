@@ -223,15 +223,49 @@ export default {
       coverImageSrc: "/stage_management.jpg",
       projects: [
         {
-          title: "",
+          title: ["The Lightning Thief:", "A Percy Jackson Musical"],
+          subline: ["Dramaturgy", "Written By Joe Tracz · Directed by Alexandra Harbold", "University of Utah"],
           media:
             {
               type: "image",
-              src: "",
+              src: "/projects/the-lightning-thief/Dramatrugy Lightning Thief.jpg",
             },
-          dateString: "",
-          description: "",
-        }
+          dateString: "Jun - Oct 2024",
+          description: "Provided information to guide actors and directors to immerse them in the setting of the musical.",
+        },
+        {
+          title: ["Somewhere: A Primer", "for the End of Days"],
+          subline: ["Production Assistant", "Directed by Penelope Caywood · Stage Managed By Jayden Dudley"],
+          media:
+            {
+              type: "image",
+              src: "/projects/somewhere/Dramaturgy Into the Woods.jpg",
+            },
+          dateString: "Aug - Oct 2023",
+          description: "Given the responsibility of being part of the stage management team.  This included coordinating with directors, actors, and other crew members to facilitate rehearsals, managing timing, and ensuring that all elements of the production came together seamlessly. In addition to rehearsal management, I was tasked with handling important paperwork, including tracking cues, notes, and updates for the production team.I also had the opportunity to learn and assist with various tracks of the Assistant Stage Managers (ASMs), gaining a deeper understanding of the multifaceted responsibilities involved in stage management, from overseeing backstage operations to managing the flow of the show. ",
+        },
+        {
+          title: "In Pieces",
+          subline: ["Deck Crew Props", "University of Utah"],
+          media:
+            {
+              type: "image",
+              src: "/projects/in-pieces/Deck Crew Props_House Manager.jpg",
+            },
+          dateString: "Nov 2022",
+          description: "Given the responsibility of assisting actors with obtaining props on time, ensuring that they had everything they needed for their scenes, and maintaining an organized flow of the production. Additionally, I was tasked with opening doors and managing logistical details to ensure smooth transitions between scenes and quick access to backstage areas. ",
+        },
+        {
+          title: "The Sweet Science of Bruising",
+          subline: ["Deck Crew Costumes", "University of Utah"],
+          media:
+            {
+              type: "image",
+              src: "/projects/sweet-science-of-bruising/Deck Crew Costumes.jpg",
+            },
+          dateString: "Nov 2022",
+          description: "Given the responsibility of assisting actors with getting into costumes on time, ensuring that they were on time for quick changes, and maintaining an organized flow of the production. Additionally, I was tasked with being the head of costumes by communicating with the assistant stage manager in charge of costumes.",
+        },
       ]
     },
     
