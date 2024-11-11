@@ -1,5 +1,6 @@
 import { Media } from "../../types/mediaStructure";
 import Container from "../layout/Container";
+import ImageSlider from "../media/ImageSlider";
 import AnimatedHeader from "../text/AnimatedHeader";
 
 interface Props {
@@ -7,7 +8,7 @@ interface Props {
   subline: string[] | string,
   date: string,
   description: string,
-  media: Media,
+  media: Media[] | Media,
   index: number,
 }
 
@@ -35,7 +36,18 @@ const ProjectSection = ({title, subline, date, description, media, index}: Props
     )
   }
 
+  const renderSwiper = (media: Media[]) => {
+    return (
+      <div className="media-container">
+        <ImageSlider imageLinks={media.map(m => m.src)}   />   
+      </div>
+    )
+  }
+
   const renderMedia = () => {
+    if(Array.isArray(media)) {
+      return renderSwiper(media);
+    }
     if(media.type === "video") {
       return renderVideo(media.src);
     }

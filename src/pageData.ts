@@ -70,11 +70,16 @@ export default {
         {
           title: ["Marvel Spotlight, Mirror of", "Most Value: A Mrs. Marvel Play"],
           subline: ["Hillcrest High School · Directed by Julie Anderson", "Charaters: Kamala Khan / Mrs. Marvel"],
-          media: 
+          media: [
             {
               type: "image",
               src: "/projects/the-little-mermaid/IMG_9357.jpg",
             },
+            {
+              type: "image",
+              src: "/projects/the-little-mermaid/IMG_9357.jpg",
+            },
+          ],
           dateString: "08 · 2019",
           description: "Mirror of Most Value: A Ms. Marvel Play is part of the Marvel Spotlight series, which brings superheroes into relatable, everyday situations. The play focuses on Kamala Khan, a young Pakistani-American teenager who gains polymorphic powers after being exposed to the Terrigen Mist. As Kamala embraces her new identity as Ms. Marvel, she becomes obsessed with building a superhero fandom by writing fan fiction. However, this obsession starts affecting her schoolwork and relationships. Kamala's journey teaches her the importance of self-acceptance and recognizing her own imperfections, all while navigating the challenges of being both a teenager and a superhero.",
         },
