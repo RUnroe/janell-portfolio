@@ -91,7 +91,7 @@
   }
 
   .project-section {
-
+    margin-top: 2rem;
     
 
     .title-row {
@@ -101,6 +101,13 @@
 
       h2 {
         margin: 0;
+      }
+    }
+
+    .subline {
+      p {
+        color: $primary-color-dark;
+        margin: 0.25rem 0;
       }
     }
     
@@ -116,6 +123,29 @@
         width: 100%;
         object-fit: contain;
 
+      }
+      iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+      }
+
+      .swiper {
+        height: 100%;
+       
+       
+        --swiper-navigation-color: #fff;
+        --swiper-pagination-color: #fff;
+        --swiper-pagination-bullet-inactive-color: #fff;
+        --swiper-pagination-bullet-inactive-opacity: 0.5;
+
+        .swiper-slide {
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
       }
     }
   }
