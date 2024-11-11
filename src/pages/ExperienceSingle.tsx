@@ -4,6 +4,7 @@ import pageData from "../pageData";
 import { useEffect, useState } from "react";
 import hasOwnProperty from "../util/types/hasOwnProperty";
 import ProjectSection from "../components/experience/ProjectSection";
+import { WaveBGIcon } from "../assets/icons/icons";
 
 const ExperienceSingle = () => {
   const navigate = useNavigate();
@@ -41,6 +42,7 @@ const ExperienceSingle = () => {
             ))}
           </section>
         </main>
+        <WaveBGIcon />
       </>
     )
   }

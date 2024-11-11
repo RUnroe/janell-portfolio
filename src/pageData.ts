@@ -61,7 +61,7 @@ export default {
           media: 
             {
               type: "image",
-              src: "",
+              src: "/projects/tempest/Directing TEMPEST.jpg",
             },
           dateString: "Jun 2023",
           description: "Collaborated with youth by adapting the story to introduce a whimsical and imaginative point of view to the original version. This process involved interactive workshops where participants shared ideas, added creative twists, and explored unique character perspectives. The collaborative effort not only made the story more playful and engaging but also encouraged the youth to express themselves, think creatively, and develop a sense of ownership over the storytelling process.",
