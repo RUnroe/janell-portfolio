@@ -92,16 +92,24 @@
 
   .project-section {
     margin-top: 2rem;
+    position: relative;
+    z-index: 1;
     
 
     .title-row {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
+      gap: 2rem;
 
       h2 {
         margin: 0;
       }
+
+      .date {
+        text-wrap: nowrap;
+      }
+      
     }
 
     .subline {
@@ -183,6 +191,10 @@
     &.left {
       flex-direction: column-reverse;
     }
+  }
+  .experience-page .project-section .title-row {
+    flex-direction: column-reverse;
+    gap: 0rem;
   }
 }
 

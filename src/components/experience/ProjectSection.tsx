@@ -2,6 +2,7 @@ import { Media } from "../../types/mediaStructure";
 import Container from "../layout/Container";
 import ImageSlider from "../media/ImageSlider";
 import AnimatedHeader from "../text/AnimatedHeader";
+import TextHighlight from "../text/TextHighlight";
 
 interface Props {
   title: string[] | string,
@@ -61,7 +62,12 @@ const ProjectSection = ({title, subline, date, description, media, index}: Props
       {imageOnLeftSide && renderMedia()} 
       <div className="text-container">
         <div className="title-row">
-          <AnimatedHeader textList={Array.isArray(title) ? title : [title]} tag={"h2"}/>
+          {/* <AnimatedHeader textList={Array.isArray(title) ? title : [title]} tag={"h2"}/> */}
+          <h2>
+          {(Array.isArray(title) ? title : [title]).join(" ").split(" ").map(word => (
+            <TextHighlight><span className="inria-sans-bold">{word}&nbsp;</span></TextHighlight>
+          ))}
+          </h2>
           <span className="date inria-sans-bold">{date}</span>
         </div>
         {subline?.length && 
