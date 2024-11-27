@@ -1,7 +1,6 @@
 import { Media } from "../../types/mediaStructure";
 import Container from "../layout/Container";
 import ImageSlider from "../media/ImageSlider";
-import AnimatedHeader from "../text/AnimatedHeader";
 import TextHighlight from "../text/TextHighlight";
 
 interface Props {
