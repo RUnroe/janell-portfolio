@@ -204,7 +204,23 @@ export default {
           media: [
             {
               type: "image",
-              src: "/projects/the-little-mermaid/IMG_9356.jpg",
+              src: "/projects/mrs-marvel/Marvel Spotlight PICTURES.PNG",
+            },
+            {
+              type: "image",
+              src: "/projects/mrs-marvel/Marvel Spotlight PICTURES(1).PNG",
+            },
+            {
+              type: "image",
+              src: "/projects/mrs-marvel/Marvel Spotlight PICTURES(2).PNG",
+            },
+            {
+              type: "image",
+              src: "/projects/mrs-marvel/Marvel Spotlight PICTURES(3).PNG",
+            },
+            {
+              type: "image",
+              src: "/projects/mrs-marvel/Marvel Spotlight PICTURES(4).PNG",
             },
           
           ],
@@ -223,6 +239,22 @@ export default {
       coverImageSrc: "/stage_management.jpg",
       projects: [
         {
+          title: ["Somewhere: A Primer", "for the End of Days"],
+          subline: ["Production Assistant", "Directed by Penelope Caywood · Stage Managed By Jayden Dudley"],
+          media: [
+            {
+              type: "image",
+              src: "/projects/somewhere/SOMEWHERE PICTURES.jpg",
+            },
+            {
+              type: "image",
+              src: "/projects/somewhere/PRODUCTION ASSISTANT Somewhere.jpg",
+            },
+          ],
+          dateString: "Aug - Oct 2023",
+          description: "Given the responsibility of being part of the stage management team.  This included coordinating with directors, actors, and other crew members to facilitate rehearsals, managing timing, and ensuring that all elements of the production came together seamlessly. In addition to rehearsal management, I was tasked with handling important paperwork, including tracking cues, notes, and updates for the production team.I also had the opportunity to learn and assist with various tracks of the Assistant Stage Managers (ASMs), gaining a deeper understanding of the multifaceted responsibilities involved in stage management, from overseeing backstage operations to managing the flow of the show. ",
+        },
+        {
           title: ["The Lightning Thief:", "A Percy Jackson Musical"],
           subline: ["Dramaturgy", "Written By Joe Tracz · Directed by Alexandra Harbold", "University of Utah"],
           media:
@@ -234,16 +266,17 @@ export default {
           description: "Provided information to guide actors and directors to immerse them in the setting of the musical.",
         },
         {
-          title: ["Somewhere: A Primer", "for the End of Days"],
-          subline: ["Production Assistant", "Directed by Penelope Caywood · Stage Managed By Jayden Dudley"],
+          title: ["Into the Woods"],
+          subline: ["Dramaturgy", "Written By Stephen Sondhiem · Directed by David Eggers", "University of Utah"],
           media:
             {
               type: "image",
-              src: "/projects/somewhere/Dramaturgy Into the Woods.jpg",
+              src: "/projects/into-the-woods/Dramaturgy Into the Woods.jpg",
             },
-          dateString: "Aug - Oct 2023",
-          description: "Given the responsibility of being part of the stage management team.  This included coordinating with directors, actors, and other crew members to facilitate rehearsals, managing timing, and ensuring that all elements of the production came together seamlessly. In addition to rehearsal management, I was tasked with handling important paperwork, including tracking cues, notes, and updates for the production team.I also had the opportunity to learn and assist with various tracks of the Assistant Stage Managers (ASMs), gaining a deeper understanding of the multifaceted responsibilities involved in stage management, from overseeing backstage operations to managing the flow of the show. ",
+          dateString: "Nov 2023 - Feb 2024",
+          description: "Provided information with collaborators to guide actors and directors to immerse them in the setting of the musical.",
         },
+
         {
           title: "In Pieces",
           subline: ["Deck Crew Props", "University of Utah"],
