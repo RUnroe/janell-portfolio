@@ -128,7 +128,7 @@ export default {
       projects: [
         {
           title: "Hunchback of Notre Dame",
-          subline: ["Murray Arts Counsil · Directed by Candy Tippets", "Characters: Gargoyle / Statue / Gypsy"],
+          subline: ["Murray Arts Council · Directed by Candy Tippets", "Characters: Gargoyle / Statue / Gypsy"],
           media: [
             {
               type: "image",
@@ -156,7 +156,7 @@ export default {
         },
         {
           title: "Cinderella",
-          subline: ["Murray Arts Counsil · Directed by Candy Tippets", "Charaters: Dragon / Ensemble"],
+          subline: ["Murray Arts Council · Directed by Candy Tippets", "Charaters: Dragon / Ensemble"],
           media:[
             {
               type: "image",
@@ -176,7 +176,7 @@ export default {
         },
         {
           title: "The Little Mermaid",
-          subline: ["Murray Arts Counsil · Directed by Candy Tippets", "Charaters: Princess / Ensemble"],
+          subline: ["Murray Arts Council · Directed by Candy Tippets", "Charaters: Princess / Ensemble"],
           media: [
             {
               type: "image",
